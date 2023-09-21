@@ -1,0 +1,14 @@
+.ticker {
+  position: relative;
+  overflow: hidden;
+
+  &__container {
+    display: flex;
+    white-space: nowrap;
+    align-items: baseline;
+  }
+
+  &__title {
+    text-transform: uppercase;
+  }
+}

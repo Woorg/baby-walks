@@ -1,0 +1,99 @@
+
+$toggle-control-color: $color-hawkes-blue;
+$toggle-width: 136px;
+$toggle-height: 68px;
+$toggle-gutter: 6px;
+$toggle-radius: 50%;
+$toggle-control-speed: .15s;
+$toggle-control-ease: ease-in;
+$toggle-radius: $toggle-height / 2;
+$toggle-control-size: 48px;
+
+.theme-toggle {
+  position: relative;
+  padding-left: 112px;
+  height: 56px;
+  display: block;
+  cursor: pointer;
+  user-select: none;
+
+  @include vp-768 {
+    padding-left: $toggle-width;
+    height: $toggle-height;
+
+  }
+
+  &__input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+
+  &__input:checked ~ .theme-toggle__control {
+    background-color: $color-transparent;
+    .theme-toggle__control-image {
+      left: calc(100% - 40px - 6px);
+
+      @include vp-768 {
+        left: calc(100% - 44px - 12px);
+
+      }
+    }
+  }
+
+  &__control {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 112px;
+    height: 100%;
+    border-radius: $toggle-radius;
+    border: 2px solid $color-hawkes-blue;
+
+    background-color: $color-transparent;
+    transition: background-color $toggle-control-speed $toggle-control-ease;
+
+    @include vp-768 {
+      width: $toggle-width;
+
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    width: 20px;
+    height: 20px;
+    transform: translateY(-50%);
+    @include vp-768 {
+      right: 20px;
+      width: 24px;
+      height: 24px;
+    }
+
+  }
+
+  &__control-image {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: $color-transparent;
+    filter: drop-shadow(0px 41px 51px rgba(1, 8, 33, 0.23)) drop-shadow(0px 20.7563px 22.2328px rgba(1, 8, 33, 0.15525)) drop-shadow(0px 8.2px 8.2875px rgba(1, 8, 33, 0.115)) drop-shadow(0px 1.79375px 2.94844px rgba(1, 8, 33, 0.07475));
+    transition: left $toggle-control-speed $toggle-control-ease;
+
+    @include vp-768 {
+      top: 8px;
+      left: 8px;
+      width: $toggle-control-size;
+      height: $toggle-control-size;
+
+    }
+  }
+}

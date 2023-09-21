@@ -1,0 +1,3 @@
+.logo {
+	@apply text-2xl font-semibold text-neutral-900 hover:text-blue-600;
+}

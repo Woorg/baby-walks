@@ -1,0 +1,55 @@
+.footer {
+  // border-top: 1px solid $color-light-gray;
+  // background: $color-nero;
+  // filter: invert(100);
+  // border-radius: size(16px) size(16px) 0 0;
+  &__container {
+
+    @include vp-768 {
+    }
+
+    @include vp-1024 {
+
+    }
+  }
+
+  &__nav {
+
+    @include vp-1024 {
+    }
+  }
+
+  &__social {
+
+    @include vp-1024 {
+    }
+  }
+
+  &__copyright {
+
+    @include vp-1024 {
+    }
+  }
+
+  &__social {
+
+    @include vp-1024 {
+    }
+  }
+
+  &__made {
+
+    @include vp-1024 {
+    }
+
+    a {
+    }
+  }
+
+  &__made-item {
+
+    &:not(:last-child) {
+
+    }
+  }
+}

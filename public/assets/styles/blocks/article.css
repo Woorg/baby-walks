@@ -1,0 +1,111 @@
+.article {
+	&__container {
+		@mixin vp-1024 {
+		}
+	}
+
+	&__entry {
+	}
+
+	&__heading {
+		@mixin vp-1024 {
+		}
+	}
+
+	&__back {
+		@mixin vp-1024 {
+		}
+	}
+
+	&__back-icon {
+		@mixin vp-1024 {
+		}
+	}
+	&__title {
+		@mixin vp-768 {
+		}
+		@mixin vp-1024 {
+		}
+	}
+
+	&__tags {
+		padding-left: 0;
+	}
+
+	&__image {
+		@mixin vp-375 {
+		}
+
+		@mixin vp-1024 {
+		}
+
+		img {
+		}
+	}
+
+	&__meta {
+		@mixin vp-768 {
+		}
+	}
+
+	&__date {
+		@mixin vp-768 {
+		}
+		@mixin vp-1024 {
+		}
+	}
+
+	&__categories {
+		@mixin vp-768 {
+		}
+	}
+	&__category {
+		@mixin vp-768 {
+		}
+		@mixin vp-1024 {
+		}
+	}
+
+	&__text {
+		@mixin vp-768 {
+		}
+	}
+
+	pre {
+		background-color: var(--astro-code-color-background);
+		font-family:
+			'JetBrains Mono',
+			ui-sans-serif,
+			system-ui,
+			-apple-system,
+			BlinkMacSystemFont,
+			Segoe UI,
+			Roboto,
+			Helvetica Neue,
+			Arial,
+			Noto Sans,
+			sans-serif,
+			'Apple Color Emoji',
+			'Segoe UI Emoji',
+			Segoe UI Symbol,
+			'Noto Color Emoji';
+		overflow-x: auto;
+		white-space: pre-wrap;
+		word-wrap: break-word;
+	}
+}
+
+.wp-block-rank-math-toc-block {
+	a {
+		@apply text-gray hover:text-white;
+	}
+	@mixin vp-768 {
+	}
+
+	@mixin vp-1440 {
+	}
+	h2 {
+	}
+	ul {
+	}
+}

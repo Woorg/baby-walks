@@ -1,0 +1,14 @@
+.banner {
+  &__container {
+
+  }
+
+  &__side {
+
+  }
+
+  &__image {
+    overflow: hidden;
+  }
+
+}

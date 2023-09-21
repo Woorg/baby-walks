@@ -1,0 +1,31 @@
+@import '../../../../public/assets/styles/variables.css';
+@import '../../../../public/assets/styles/mixins.css';
+
+.header {
+	/* @apply bg-orange-400; */
+	@screen sm {
+		/* @apply bg-sky-400; */
+	}
+}
+
+.container {
+	@apply flex items-center justify-between;
+}
+
+.logo {
+	/* @apply bg-green-500; */
+}
+.control {
+	@apply flex max-w-sm items-center justify-start gap-3;
+}
+
+.icon {
+	@apply h-6 w-6;
+}
+
+.trigger {
+	@apply rounded-full bg-neutral-200 p-2;
+}
+
+.navigation {
+}

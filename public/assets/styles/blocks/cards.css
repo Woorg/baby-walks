@@ -1,0 +1,206 @@
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 0 24px;
+  @include vp-768 {
+    flex-direction: row;
+  }
+  &__card {
+    border: 1px solid $color-tory-blue-15;
+    margin-bottom: 24px;
+    height: size(200px);
+    background-color: $color-default-white;
+    border-radius: 8px;
+    overflow: hidden;
+    @include vp-320 {
+
+    }
+
+    @include vp-768 {
+      margin-bottom: 0;
+      max-width: calc(33.3%);
+      width: 100%;
+      height: size(420px);
+      display: flex;
+      flex-direction: column;
+    }
+
+
+    &:not(:last-child) {
+      // margin-bottom: 24px;
+      @include vp-768 {
+        margin-bottom: 0;
+        // margin-right: size(24px);
+
+      }
+    }
+
+    &--selection {
+      order: 0;
+      @include vp-768 {
+      }
+    }
+
+    &--misspeak {
+      margin-bottom: 0;
+      order: 2;
+      @include vp-768 {
+        order: 1;
+      }
+    }
+
+    &--route {
+      margin-bottom: 24px;
+      order: 1;
+      @include vp-768 {
+        margin-bottom: 0;
+        order: 2;
+      }
+    }
+
+  }
+
+  &__card-link {
+    display: grid;
+    grid-template-columns: 60% 1fr;
+    grid-template-rows: minmax(size(200px), max-content);
+
+    @include vp-768 {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    @include vp-1024 {
+    }
+  }
+
+  &__card-entry {
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    @include vp-320 {
+
+    }
+
+    @include vp-768 {
+      padding-bottom: 30px;
+      padding-right: 20px;
+      height: size(128px);
+      // flex-direction: row;
+      text-align: center;
+    }
+
+  }
+
+  &__card-label {
+    margin-top: 0;
+    margin-bottom: auto;
+    @include vp-768 {
+      margin-bottom: 8px;
+    }
+
+  }
+
+  &__card-title {
+    @include vp-768 {
+      margin-top: auto;
+      margin-bottom: auto;
+      // padding-right: 20px;
+      // padding-left: 20px;
+    }
+  }
+
+  &__card-images,
+  &__card-map,
+  &__card-slider {
+    display: flex;
+    flex-grow: 1;
+    overflow: hidden;
+    border-radius: 0 7px 7px 0;
+    @include vp-320 {
+
+    }
+
+    @include vp-768 {
+      border-radius: 0 0 7px 7px;
+    }
+  }
+
+  &__card-map {
+    height: size(202px);
+    @include vp-768 {
+      height: auto;
+    }
+    picture {
+      width: 100%;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__card-col {
+    max-width: 50%;
+    width: 100%;
+    flex-shrink: 1;
+    &:not(:last-child) {
+      margin-right: 2px;
+    }
+  }
+
+  &__card-image {
+    display: block;
+    overflow: hidden;
+    &:not(:last-child) {
+      margin-bottom: 2px;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 50% 0%;
+    }
+    &--1 {
+      height: 80px;
+      @include vp-768 {
+        height: 200px;
+      }
+    }
+
+    &--2 {
+      height: 118px;
+      @include vp-768 {
+        height: 90px;
+
+      }
+    }
+
+    &--3 {
+      height: 118px;
+      @include vp-768 {
+        height: 90px;
+
+      }
+    }
+
+    &--4 {
+      height: 80px;
+      @include vp-768 {
+        height: 200px;
+
+      }
+    }
+
+  }
+
+}

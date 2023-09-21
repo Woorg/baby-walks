@@ -1,0 +1,14 @@
+.logo {
+	flex-shrink: 0;
+	font-weight: 300;
+	font-size: rfs(23px);
+	color: currentColor;
+	text-transform: none;
+	/* letter-spacing: rfs(-0.8px); */
+	line-height: 1;
+	@mixin vp-1024 {
+		font-size: rfs(40px);
+	}
+	&:hover {
+	}
+}

@@ -1,0 +1,13 @@
+@import 'tailwind.css';
+@import 'vendor/normalize.css';
+@import 'variables.css';
+/* @import 'mixins.css'; */
+/* @import 'functions.css'; */
+@import 'typography.css';
+@import 'keyframes.css';
+
+@import 'global/fonts.css';
+@import 'global/reboot.css';
+@import 'global/utils.css';
+@import 'global/container.css';
+

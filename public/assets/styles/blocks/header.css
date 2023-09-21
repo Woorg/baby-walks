@@ -1,0 +1,27 @@
+.header {
+	@mixin vp-1024 {
+	}
+
+	&__container {
+	}
+
+	&__logo {
+		&:hover {
+		}
+	}
+
+	&__nav-w {
+		@mixin vp-1024 {
+		}
+	}
+
+	&__theme-toggle {
+		@mixin vp-768 {
+		}
+	}
+
+	&__year {
+		@mixin vp-1024 {
+		}
+	}
+}

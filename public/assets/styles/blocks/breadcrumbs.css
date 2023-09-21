@@ -1,0 +1,27 @@
+.breadcrumbs {
+  margin-bottom: size(30px);
+  @include vp-1024 {
+    margin-bottom: size(50px);
+  }
+  &__list {
+    border-bottom: 1px solid $color-light-gray;
+    padding-bottom: size(15px);
+    display: flex;
+    align-items: center;
+    gap: size(30px) size(20px);
+    overflow-x: scroll;
+    @include vp-768 {
+      // padding-bottom: size(30px);
+      overflow-x: auto;
+    }
+  }
+
+  &__item {
+
+  }
+
+  .breadcrumbs__link {
+    background-color: $color-default-white;
+    filter: invert(100);
+  }
+}

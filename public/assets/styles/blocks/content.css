@@ -1,0 +1,8 @@
+.content {
+  padding-bottom: 100px;
+  max-width: 924px;
+  width: 100%;
+  @include vp-1280 {
+    max-width: size(924px);
+  }
+}

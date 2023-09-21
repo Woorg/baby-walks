@@ -1,0 +1,36 @@
+
+.donate {
+  margin-bottom: size(50px);
+  padding-top: size(30px);
+  padding-right: size(30px);
+  padding-bottom: size(10px);
+  padding-left: size(50px);
+
+  background-color: $color-tomato;
+  //color: $color-default-white;
+  border-radius: size(50px);
+
+  &__title {
+    margin-top: 0;
+    //color: $color-default-white;
+  }
+
+  &__list {
+    padding-left: 0;
+    list-style: none;
+  }
+
+  &__item {
+    padding-left: 0;
+    color: $color-nero;
+    font-weight: bold;
+  }
+
+  .donate__link {
+    color: $color-nero;
+  }
+
+  &__address {
+    font-weight: normal;
+  }
+}

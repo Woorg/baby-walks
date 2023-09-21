@@ -1,0 +1,32 @@
+.intro {
+  padding-top: 23px;
+  padding-bottom: 30px;
+
+  &__heading {
+    border-bottom: 1px solid $color-tory-blue-15;
+    margin-bottom: 30px;
+    height: size(102px);
+    overflow: hidden;
+    @include vp-320 {
+    }
+
+    @include vp-1024 {
+      height: size(254px);
+    }
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 0;
+    max-width: 60%;
+
+    @include vp-1024 {
+      max-width: 100%;
+
+    }
+  }
+
+  &__cards {
+
+  }
+}

@@ -1,0 +1,113 @@
+.nav {
+  max-width: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  @include vp-1024 {
+  }
+  &--secondary {
+    .nav__list {
+    }
+    .nav__link {
+      @apply text-gray relative rounded-lg px-3 py-2 transition-colors delay-150 text-xs hover:text-white;
+    }
+  }
+
+  &__logo {
+    @include vp-1024 {
+    }
+  }
+
+  &__w {
+    @include vp-768 {
+    }
+    @include vp-1024 {
+    }
+  }
+
+  &__write-btn {
+    @include vp-375 {
+    }
+    @include vp-768 {
+    }
+
+    @include vp-1024 {
+    }
+
+    &:hover {
+      .nav__write-icon {
+      }
+      .nav__write-text {
+      }
+    }
+  }
+
+  &__write-icon {
+  }
+
+  &__write-text {
+  }
+
+  &__trigger {
+    @include vp-1024 {
+    }
+  }
+  &__trigger--active {
+    .nav__trigger-line {
+      &:not(:last-child) {
+      }
+    }
+  }
+
+  &__trigger-line {
+    &:not(:last-child) {
+    }
+  }
+
+  &__list {
+    @apply flex flex-col lg:flex-row;
+    @include vp-1024 {
+    }
+  }
+
+  &__link {
+    @apply text-gray rounded-lg px-3 py-2 transition-colors delay-150 text-sm hover:text-white;
+
+    @include vp-1024 {
+    }
+    &:hover {
+    }
+  }
+}
+
+.nav--open {
+  @include vp-375 {
+  }
+
+  .nav__logo {
+  }
+
+  .nav__trigger {
+    .nav__trigger-line {
+      &:not(:last-child) {
+      }
+    }
+  }
+  .nav__list {
+    @include vp-375 {
+    }
+  }
+
+  .nav__item {
+    &:not(:last-child) {
+    }
+  }
+  .nav__link {
+    @include vp-1024 {
+    }
+
+    &:hover {
+    }
+  }
+}

@@ -1,0 +1,96 @@
+.digits {
+  // height: 100vh;
+  // background-color: $color-nero;
+  // filter: invert(100);
+  border-bottom: 1px solid $color-light-gray;
+  border-radius: size(16px) size(16px) size(16px) size(16px);
+  &__container {
+    align-items: center;
+    // color: $color-nero;
+  }
+  &__heading {
+    border-bottom: 1px solid $color-light-gray;
+    margin-bottom: size(30px);
+    padding-bottom: size(15px);
+
+    @include vp-768 {
+      padding-bottom: size(30px);
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      align-items: center;
+      gap: 0 size(30px);
+    }
+
+    @include vp-1024 {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: size(10px);
+    @include vp-768 {
+      margin-bottom: 0;
+      grid-column: span 1 / span 1;
+    }
+    @include vp-1024 {
+      grid-column: span 2 / span 2;
+    }
+  }
+  &__list {
+    display: grid;
+    // align-items: center;
+    margin-bottom: size(16px);
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: size(15px);
+    list-style: inside;
+
+    @include vp-1024 {
+      margin-bottom: size(30px);
+      margin-bottom: 0;
+      gap: size(30px);
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+    // list-style-type: armenian;
+    // list-style: armenian;
+  }
+
+  &__item {
+    // border: 1px solid $color-light-gray;
+    padding: size(20px) size(30px) size(30px);
+    // min-height: size(150px);
+    // grid-column: span 1 / span 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    // justify-content: center;
+    // align-items: center;
+    // background-color: $color-nero;
+    background-color: $color-default-white;
+    // color: $color-default-white;
+    border-radius: size(16px);
+    &::marker {
+      display: block;
+      color: blue;
+    }
+  }
+
+  &__fact {
+    // font-weight: 600;
+    font-size: size(28px);
+    line-height: 1.3;
+
+    @include vp-1024 {
+      font-size: size(39px);
+    }
+
+    @include vp-1280 {
+      font-size: size(43px);
+    }
+  }
+
+  &__text {
+    margin-top: size(30px);
+  }
+}

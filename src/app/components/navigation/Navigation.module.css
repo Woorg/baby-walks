@@ -1,0 +1,16 @@
+.navigation {
+	@apply mt-px text-5xl font-medium tracking-tight text-white;
+}
+
+.container {
+	@apply even:mt-px sm:bg-neutral-950;
+}
+
+.list {
+}
+
+.item {
+}
+
+.link {
+}

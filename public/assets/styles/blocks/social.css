@@ -1,0 +1,36 @@
+.social {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 5px 15px;
+  &__item {
+    flex-grow: 1;
+    &:not(&:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__link {
+    border: 1px solid $color-light-gray;
+    padding: size(5px) size(10px);
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    // background: $color-white-smoke;
+    // background: $color-pigment-green;
+    color: currentColor;
+    // color: $color-pigment-green;
+    font-size: size(16px);
+    // text-transform: uppercase;
+    border-radius: 30px 30px / 30px 30px;
+    @include vp-768 {
+    height: size(50px);
+      font-size: size(21px);
+    }
+    &:hover {
+      color: $color-dark-gray;
+    }
+  }
+}

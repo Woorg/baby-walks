@@ -1,0 +1,10 @@
+.side {
+  margin-left: 24px;
+  max-width: 292px;
+  width: 100%;
+  @include vp-1280 {
+    max-width: size(292px);
+
+  }
+
+}

@@ -1,0 +1,96 @@
+.hero {
+  position: relative;
+  border-bottom: 1px solid $color-light-gray;
+  // background-color: $color-white-smoke;
+  overflow: hidden;
+
+  &__container {
+    position: relative;
+    padding-top: size(100px);
+    padding-bottom: size(50px);
+    align-items: center;
+    border-radius: size(16px);
+    @include vp-768 {
+      padding-bottom: size(100px);
+      padding-top: size(150px);
+    }
+
+    @include vp-1024 {
+    }
+    @include vp-1280 {
+    }
+    @include vp-1440 {
+    }
+  }
+
+  &__entry {
+    margin-right: auto;
+    margin-left: auto;
+    // max-width: size(700px);
+    text-align: left;
+    @include vp-375 {
+    }
+    @include vp-768 {
+      // max-width: size(900px);
+    }
+    @include vp-1024 {
+    }
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: size(20px);
+    text-align: center;
+    @include vp-768 {
+      margin-bottom: size(50px);
+    }
+    @include vp-1024 {
+    }
+  }
+
+  &__text {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: size(500px);
+    font-size: size(19px);
+    @include vp-768 {
+    }
+    @include vp-1024 {
+      font-size: size(23px);
+      max-width: size(600px);
+    }
+    @include vp-1280 {
+      font-size: size(27px);
+    }
+  }
+
+  &__thing {
+    position: relative;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: size(15px);
+    max-width: size(300px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: size(16px);
+
+    @include vp-375 {
+      max-width: size(350px);
+    }
+    @include vp-768 {
+      max-width: size(400px);
+      width: size(400px);
+      height: size(400px);
+    }
+
+    @include vp-1024 {
+      margin-bottom: size(30px);
+    }
+
+    canvas {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+.main-menu {
+	/* display: none; */
+
+	&__list {
+	}
+
+	&__item {
+	}
+
+	&__link {
+		&.is-active {
+		}
+	}
+
+	&__toggle {
+	}
+}

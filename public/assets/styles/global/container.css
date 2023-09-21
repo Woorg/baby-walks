@@ -1,0 +1,27 @@
+.container {
+	position: relative;
+	max-width: 100%;
+	width: 100%;
+	margin: auto;
+	padding-right: rfs(16px);
+	padding-left: rfs(16px);
+
+	/* @mixin vp-320 {
+		padding-right: rfs(15px);
+		padding-left: rfs(15px);
+	}
+
+	@mixin vp-375 {
+		padding-right: rfs(30px);
+		padding-left: rfs(30px);
+	}
+
+	@mixin vp-1024 {
+		padding-right: rfs(30px);
+		padding-left: rfs(30px);
+	}
+
+	@mixin vp-1920 {
+		max-width: 100%;
+	} */
+}
