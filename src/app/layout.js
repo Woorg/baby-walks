@@ -1,11 +1,30 @@
 // import "./globals.css";
 import '../../public/assets/styles/style.css';
 
-import { Inter } from 'next/font/google';
+import { Cormorant_Infant, Manrope, Noto_Serif } from 'next/font/google';
 import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
+import { cn } from './lib/utils';
 
-const inter = Inter({ subsets: ['latin'] });
+const manrope = Manrope({
+	subsets: ['cyrillic'],
+	display: 'swap',
+	preload: true,
+	variable: '--manrope',
+});
+const cormorantInfant = Cormorant_Infant({
+	weight: ['600'],
+	subsets: ['cyrillic'],
+	display: 'swap',
+	preload: true,
+	variable: '--cormorant',
+});
+const notoSerif = Noto_Serif({
+	subsets: ['cyrillic'],
+	display: 'swap',
+	preload: true,
+	variable: '--noto',
+});
 
 export const metadata = {
 	title: 'Курс по уходу за ребёнком ребёнком от 0 до 12 месяцев - Babywalks',
@@ -16,7 +35,14 @@ export const metadata = {
 export default function Layout({ children }) {
 	return (
 		<html lang="ru">
-			<body className={inter.className}>
+			<body
+				className={cn(
+					manrope.variable,
+					cormorantInfant.variable,
+					notoSerif.variable,
+					'flex min-h-screen flex-col',
+				)}
+			>
 				<Header />
 				{children}
 				<Footer />

@@ -1,0 +1,33 @@
+.form {
+	@apply bg-white bg-opacity-10 px-10 py-10;
+}
+.title {
+	@apply mb-10 text-white;
+}
+.formObject {
+	/* @apply px-10 py-10; */
+}
+.row {
+	@apply flex items-center gap-5;
+}
+
+.field {
+}
+.label {
+	@apply flex flex-col justify-start text-white;
+}
+.labelText {
+	@apply mb-5 text-base text-white;
+}
+.inputText {
+	@apply bg-input h-[52px] rounded-full px-5 text-white placeholder:text-[#CFCFCF] focus-within:outline-current focus-within:outline-white;
+}
+.submitW {
+}
+
+.submit {
+}
+
+.note {
+	@apply mt-2.5  text-xs text-white;
+}

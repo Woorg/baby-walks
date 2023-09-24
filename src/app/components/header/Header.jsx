@@ -2,29 +2,31 @@
 
 import { useEffect, useId, useRef, useState } from 'react';
 import { motion, MotionConfig, useReducedMotion } from 'framer-motion';
-import Container from '../container/Container';
-import Logo from '../logo/Logo';
-import clsx from 'clsx';
 import Button from '../button/Button';
-// menu icons
-// menu icons
 import Link from 'next/link';
 import Navigation from '../navigation/Navigation';
+import MenuIcon from '../icons/MenuIcon';
+import CloseIcon from '../icons/CloseIcon';
+import Logo from '../logo/Logo';
+import Container from '../container/Container';
+import Styles from './Header.module.css';
+import Image from 'next/image';
+import LogoImg from '@images/general/logo.webp';
+import TelegramIcon from '../icons/TelegramIcon';
+import { cn } from '../../lib/utils';
 
 const Header = () => {
 	const panelId = useId();
 	const [expanded, setExpanded] = useState(false);
 	const toggleRef = useRef();
-	const closeRef = useRef();
 	const navRef = useRef();
 	const shouldReduceMotion = useReducedMotion();
-	const [isInverted, setIsInverted] = useState(false); // Track inverted state
 
 	useEffect(() => {
 		function onClick(event) {
 			if (event.target.closest('a')?.href === window.location.href) {
 				setExpanded(false);
-				setIsInverted(false); // Reset inverted state when menu is closed
+				setIsInverted(false);
 			}
 		}
 		window.addEventListener('click', onClick);
@@ -36,46 +38,49 @@ const Header = () => {
 
 	const toggleMenu = () => {
 		setExpanded(!expanded);
-		setIsInverted(!expanded); // Invert the colors when menu is opened/closed
+		// setIsInverted(!expanded);
+	};
+
+	const data = {
+		telegram: {
+			link: 'https://web.telegram.org/k/',
+		},
+		contact: {
+			link: '#contact',
+			text: 'Присоединиться',
+		},
+		logo: {
+			src: LogoImg,
+			alt: 'BabyWalks',
+		},
 	};
 
 	return (
-		<MotionConfig transition={shouldReduceMotion ? { duration: 0 } : undefined}>
-			<header
-				className={clsx(
-					'transition-colors',
-					'z-50 w-full p-4',
-					expanded ? 'bg-white' : 'bg-transparent',
-				)}
-			>
-				<div
-					className={clsx(
-						'flex items-center justify-between',
-						expanded ? 'relative z-50 text-white' : 'bg-transparent text-black',
-					)}
-				>
-					{/* Logo */}
-					<Link href={'/'} aria-label="Home">
-						<Logo
-							className={clsx({
-								'text-white': expanded,
-								'text-black': !expanded,
-							})}
-						>
-							Studio_clone
-						</Logo>
-					</Link>
+		<header className={cn(Styles.header, 'fixed left-0 top-0 z-50 w-full transition-colors')}>
+			<Container className={cn(Styles.container, '')}>
+				<Logo className={cn(Styles.logo, '')}>
+					<Image
+						src={data.logo.src}
+						alt={data.logo.alt}
+						width={data.logo.width}
+						height={data.logo.height}
+						blurDataURL={data.logo.blurDataURL}
+						placeholder="blur"
+					/>
+				</Logo>
+				<div className={cn(Styles.wrapper, '')}>
+					<Navigation className={cn(Styles.navigation, '')} />
 
-					<div className="flex items-center gap-x-8">
+					<div className={cn(Styles.control, '')}>
+						<Button href={data.telegram.link} className={cn(Styles.contact, '')}>
+							<TelegramIcon className="h-[40px] w-[40px] lg:h-[50px] lg:w-[50px] xl:h-[52px] xl:w-[52px]" />
+						</Button>
+
 						<Button
-							href={'/contact'}
-							className={clsx(
-								expanded
-									? 'bg-white text-black hover:bg-white hover:text-black'
-									: 'bg-black text-white hover:bg-black hover:text-white',
-							)}
+							href={data.contact.link}
+							className={cn(Styles.contact, Styles.general, 'btn btn_big')}
 						>
-							Contact us
+							{data.contact.text}
 						</Button>
 
 						<button
@@ -84,53 +89,19 @@ const Header = () => {
 							onClick={toggleMenu}
 							aria-expanded={expanded.toString()}
 							aria-controls={panelId}
-							className={clsx(
-								'group rounded-full p-2.5 transition',
-								expanded
-									? 'bg-white text-black  hover:bg-white hover:text-black'
-									: 'bg-black text-white hover:bg-black hover:text-black',
-							)}
+							className={cn('rounded-full p-2.5 transition lg:hidden')}
 							aria-label="Toggle navigation"
 						>
 							{expanded ? (
-								<IoMdClose
-									className={clsx(
-										'h-6 w-6',
-										expanded
-											? 'fill-black group-hover:fill-black'
-											: 'fill-black group-hover:fill-white',
-									)}
-								/>
+								<CloseIcon className={cn('h-9 w-9')} />
 							) : (
-								<HiMenuAlt4
-									className={clsx(
-										'h-6 w-6',
-										expanded
-											? 'fill-black group-hover:fill-black'
-											: 'fill-white group-hover:fill-white',
-									)}
-								/>
+								<MenuIcon className={cn('h-9 w-9')} />
 							)}
 						</button>
 					</div>
 				</div>
-
-				<motion.div
-					layout
-					id={panelId}
-					style={{ height: expanded ? 'auto' : '0' }}
-					className="fixed left-0 top-0 z-10 w-full overflow-hidden bg-neutral-950 pt-0"
-					aria-hidden={expanded ? undefined : 'true'}
-					inert={expanded ? undefined : ''}
-				>
-					<motion.div layout className="bg-neutral-800">
-						<div ref={navRef} className="bg-neutral-950 pb-16 pt-14">
-							<Navigation />
-						</div>
-					</motion.div>
-				</motion.div>
-			</header>
-		</MotionConfig>
+			</Container>
+		</header>
 	);
 };
 

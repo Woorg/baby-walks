@@ -1,0 +1,58 @@
+.advantages {
+	@apply bg-[#49588F];
+}
+
+.container {
+	@apply py-10;
+}
+
+.title {
+	@apply mb-10;
+}
+
+.list {
+	@apply mb-10 grid grid-cols-3 gap-5;
+}
+
+.item {
+	@apply relative;
+
+	&:after,
+	&:before {
+		@apply absolute top-0 hidden h-full w-px bg-white bg-opacity-20 content-[''];
+	}
+
+	&:after {
+		@apply right-0;
+	}
+
+	&:before {
+		@apply left-0;
+	}
+
+	&:nth-child(3n + 2),
+	&:nth-child(3n + 5) {
+		@apply px-7;
+		&:after,
+		&:before {
+			@apply block;
+		}
+		&:after {
+			/* @apply */
+		}
+		&:before {
+		}
+	}
+}
+
+.itemNum {
+	@apply mb-5 text-[100px] font-extrabold leading-none text-white text-opacity-20;
+}
+
+.itemTitle {
+	@apply mb-5 text-white;
+}
+
+.itemText {
+	@apply text-[#CFCFCF];
+}

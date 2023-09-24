@@ -1,0 +1,50 @@
+.testimonials {
+	@apply bg-[#49588F];
+}
+
+.container {
+	@apply py-10;
+}
+
+.title {
+	@apply mb-10 text-white;
+}
+
+.slider {
+}
+
+.swiper {
+	@apply flex flex-col overflow-visible 2xl:-mr-[46px];
+	.swiper-wrapper {
+		@apply w-full;
+	}
+}
+
+.nav {
+	@apply relative z-10 -order-1 mb-10 flex justify-end gap-5;
+}
+
+.sliderPrev,
+.sliderNext {
+	@apply text-[#7592FF] transition-opacity;
+	&[disabled] {
+		@apply opacity-30;
+	}
+}
+
+.sliderPrev {
+	@apply rotate-180;
+}
+
+.sliderNext {
+}
+
+.sliderSlide {
+	@apply w-[calc(302px+8px)] lg:w-[calc(230px+20px)];
+}
+
+.sliderImage {
+}
+
+.image {
+}

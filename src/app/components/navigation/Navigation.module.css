@@ -1,16 +1,27 @@
 .navigation {
-	@apply mt-px text-5xl font-medium tracking-tight text-white;
+	/* @apply; */
 }
 
 .container {
-	@apply even:mt-px sm:bg-neutral-950;
 }
 
 .list {
+	@apply flex;
 }
 
 .item {
+	&:first-child {
+		.link {
+			@apply lg:pl-0 xl:pl-5;
+		}
+	}
+	&:last-child {
+		.link {
+			@apply lg:pr-0 xl:pr-5;
+		}
+	}
 }
 
 .link {
+	@apply px-2.5 font-manrope text-sm font-bold text-blue-950 xl:px-5 2xl:text-base;
 }

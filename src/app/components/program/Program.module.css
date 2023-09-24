@@ -1,0 +1,33 @@
+.program {
+}
+
+.container {
+	@apply my-20;
+}
+
+.title {
+	@apply mb-10;
+}
+
+.list {
+	@apply max-w-[823px] w-full
+}
+
+.item {
+	@apply flex items-start gap-3 py-5 last-of-type:mb-0;
+}
+
+.num {
+	@apply mt-12 text-[52px] font-extralight leading-none text-slate-400;
+}
+
+.entry {
+}
+
+.entryTitle {
+	@apply mb-5 border-b border-stone-300 py-5 pl-[30px];
+}
+
+.entryText {
+	@apply pl-[30px];
+}

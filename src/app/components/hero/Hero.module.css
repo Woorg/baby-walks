@@ -1,0 +1,40 @@
+.hero {
+}
+.container {
+}
+
+.intro {
+	@apply mb-36 flex items-center;
+}
+
+.introEntry {
+	@apply max-w-3xl;
+}
+
+.introImg {
+	@apply ml-auto h-[678px] w-[428px];
+}
+
+.title {
+}
+
+.text {
+}
+
+.basic {
+}
+
+.basicHeading {
+	@apply mb-8 flex flex-wrap gap-x-4 xl:flex-nowrap;
+}
+
+.basicTitle {
+	@apply max-w-7xl;
+}
+
+.spin {
+	@apply flex-shrink-0;
+}
+
+.basicText {
+}

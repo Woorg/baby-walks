@@ -16,9 +16,9 @@ const Logo = ({ invert, href, className, children, ...props }) => {
 		);
 	} else {
 		return (
-			<h1 className={className} {...props}>
+			<div className={className} {...props}>
 				{children}
-			</h1>
+			</div>
 		);
 	}
 };

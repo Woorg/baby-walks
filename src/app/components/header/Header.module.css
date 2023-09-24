@@ -1,22 +1,27 @@
-@import '../../../../public/assets/styles/variables.css';
-@import '../../../../public/assets/styles/mixins.css';
+/* @import '../../../../public/assets/styles/variables.css'; */
+/* @import '../../../../public/assets/styles/mixins.css'; */
 
 .header {
-	/* @apply bg-orange-400; */
+	@apply rounded-bl-2xl rounded-br-2xl border-b border-white bg-white  bg-opacity-20 backdrop-blur-md;
 	@screen sm {
-		/* @apply bg-sky-400; */
 	}
 }
 
 .container {
-	@apply flex items-center justify-between;
+	@apply relative flex items-center items-center justify-start justify-between py-5;
+}
+.wrapper {
+	@apply flex w-full items-center justify-between;
+}
+.navigation {
+	@apply w-full max-w-[421px]  xl:max-w-[578px];
 }
 
 .logo {
-	/* @apply bg-green-500; */
+	@apply absolute left-1/2 top-2.5  flex-shrink-0  -translate-x-1/2 lg:h-[72px] lg:w-[70px] xl:h-[74px] xl:w-[72px];
 }
 .control {
-	@apply flex max-w-sm items-center justify-start gap-3;
+	@apply flex w-full max-w-[607px] items-center  justify-end gap-2.5  xl:max-w-[578px];
 }
 
 .icon {
@@ -26,6 +31,5 @@
 .trigger {
 	@apply rounded-full bg-neutral-200 p-2;
 }
-
-.navigation {
-}
+/* .contact {
+} */

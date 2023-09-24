@@ -1,21 +1,21 @@
 module.exports = {
 	plugins: {
-		'postcss-simple-vars': {},
 		'tailwindcss/nesting': {},
+		'postcss-simple-vars': {},
 		'postcss-import': {},
 		'postcss-mixins': {},
 		tailwindcss: {},
 		rfs: {
 			twoDimensional: false,
-			baseValue: 19,
+			baseValue: 16,
 			unit: 'rem',
-			breakpoint: 1920,
+			breakpoint: 1440,
 			breakpointUnit: 'px',
 			factor: 10,
 			class: false,
 			unitPrecision: 6,
 			safariIframeResizeBugFix: false,
-			remValue: 19,
+			// remValue: 16,
 		},
 		'postcss-preset-env': {
 			autoprefixer: { grid: true },

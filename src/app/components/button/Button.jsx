@@ -1,27 +1,17 @@
-import clsx from 'clsx';
 import Link from 'next/link';
-import cn from './Button.module.css';
+import Styles from './Button.module.css';
+import { cn } from '../../lib/utils';
 
-
-
-const Button = ({ href, className, invert, children, ...props }) => {
-	className = clsx(
-		cn.button,
-		className,
-		invert
-			? 'bg-white text-neutral-950 hover:bg-neutral-200'
-			: 'bg-neutral-950 text-white hover:bg-neutral-800',
-	);
+const Button = ({ href, className, children, ...props }) => {
 
 	if (href) {
 		return (
-			<Link href={href} className={className} {...props}>
+			<Link href={href} className={cn(Styles.button, className)} {...props}>
 				{children}
-
 			</Link>
 		);
 	} else {
-		return <button className={className}>{children}</button>;
+		return <button className={cn(Styles.button, className)}>{children}</button>;
 	}
 };
 

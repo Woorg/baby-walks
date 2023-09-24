@@ -1,5 +1,10 @@
 /* Colors
  --------------------------------- */
+:root {
+	--manrope: var(--font-manrope);
+	--cormorant: var(--font-cormorant);
+	--noto: var(--font-noto);
+}
 
 /* Default */
 
@@ -14,49 +19,34 @@ $color-transparent: rgba(255, 255, 255, 0);
  для нейминга цветов используем https://www.htmlcsscolor.com/hex/334482 */
 
 $color-dark-gray: #a7a7a7;
-$color-light-gray: #d6d6d6;
-$color-nero: #151515;
-$color-storm-grey: #808183;
-$color-tory-blue: #304c89;
-$color-tory-blue-15: rgba(48, 76, 137, 0.15);
-$color-tory-blue-25: rgba(48, 76, 137, 0.25);
-$color-tory-blue-5: rgba(48, 76, 137, 0.05);
-$color-granny-smith: #7f9c96;
-$color-granny-smith-15: rgba(127, 156, 150, 0.15);
-$color-don-juan: #654c4f;
-$color-ghost-white: #f3f3f5;
-$color-purple-heart: #6c43bf;
-$color-tomato: #ff5858;
-$color-turbo: #35332e;
-$color-apple: #68aa43;
-$color-dark-sea-green: #8fbc8f;
-$color-lightgreen: #90ee90;
-$color-summer-green: #87c7a0;
-$color-hawkes-blue: #d6d9e1;
-$color-light-slate-grey: #828792;
-$color-lavender: #e4e1fa;
-$color-white-smoke: #f5f5f5;
-$color-international-klein-blue: #002bc1;
-$color-pigment-green: #0da34e;
-$color-dark-spring-green: #0a823e;
-$color-silver: #bbbbbb;
-$color-neon-blue: #4f5bff;
+$color-pigment-green: #00a550;
 
 /* Gradient */
-
-$black-to-right: linear-gradient(90deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 75%);
 
 /* Typography
  --------------------------------- */
 
 /* переменная используемая в html для подключения скейлинга */
-$fz-default: 19px;
+$fz-default: 16px;
 
 /* у некоторых шрифтов в ios возникают проблемы с символом рубля */
 /* https://www.artlebedev.ru/kovodstvo/sections/159/#13 */
 $ff-rouble: 'Rouble', 'Arial', sans-serif;
 
-$ff-inter: 'Inter', 'Arial', sans-serif;
+/* $ff-inter: 'Inter', 'Arial', sans-serif; */
+$ff-manrope: 'Manrope', 'Arial', sans-serif;
+$ff-cormorant-infant:
+	'Cormorant Infant',
+	Georgia,
+	Times,
+	Times New Roman,
+	serif;
+$ff-noto-serif:
+	'Noto Serif',
+	Georgia,
+	Times,
+	Times New Roman,
+	serif;
 
 /* Animation
  --------------------------------- */
