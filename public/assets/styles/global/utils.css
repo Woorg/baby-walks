@@ -17,6 +17,14 @@
 		@apply h-[44px] px-[20px] py-2.5;
 	}
 
+	.btn_icon {
+		@apply gap-1.5;
+	}
+
+	.btnArrow {
+		@apply h-6 w-9;
+	}
+
 	.btn_full {
 		@apply w-full;
 	}
@@ -39,4 +47,16 @@
 	.text_big {
 		@apply text-xl font-light;
 	}
+
+	.spin-logo {
+		@apply relative flex h-[211px] w-[211px] items-center justify-center;
+	}
+	.spin-logo__letters {
+		@apply absolute left-1/2 top-1/2 h-[193px] w-[193px] -translate-x-1/2 -translate-y-1/2;
+	}
+	.spin-logo__image {
+		@apply absolute left-1/2 top-1/2 h-[126px] w-[126px]  -translate-x-1/2 -translate-y-1/2;
+	}
+
+	
 }

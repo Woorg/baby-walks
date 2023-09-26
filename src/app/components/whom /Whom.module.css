@@ -1,8 +1,45 @@
 .whom {
+	@apply relative;
 }
 
 .container {
+	@apply py-20;
+}
+
+.row {
+	@apply flex items-center gap-[136px];
+}
+
+.entry {
+}
+
+.image {
+	@apply relative h-[612px] w-[591px];
+}
+
+.spin {
+	@apply absolute -top-[58px] right-1;
 }
 
 .title {
+	@apply mb-5;
+}
+
+.text {
+	@apply mb-10;
+}
+
+.widget {
+	@apply relative flex min-h-[437px] items-center justify-center bg-zinc-300;
+}
+
+.widgetScript {
+	@apply absolute left-0 top-0 h-full w-full;
+}
+
+.cloud {
+	@apply pointer-events-none absolute -bottom-[160px] -right-[146px]  z-10 h-[248px] w-[487px];
+	img {
+		@apply h-full w-full max-w-none;
+	}
 }

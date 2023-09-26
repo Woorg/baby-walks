@@ -1,6 +1,8 @@
 import Container from '../container/Container';
 import Image from 'next/image';
 import StudioImg from '@images/content/studio-img.webp';
+import Styles from './Studio.module.css';
+import { cn } from '../../lib/utils';
 
 const data = {
 	title: 'Описание студии',
@@ -12,20 +14,25 @@ const data = {
 };
 const Studio = () => {
 	return (
-		<section className="studio">
-			<Container>
-				<h2 className="studio__title">{data.title}</h2>
-				<div className="studio__text">{data.text}</div>
-				<figure className="studio__image">
-					<Image
-						src={data.image.src}
-						alt={data.image.alt}
-						width={data.image.width}
-						height={data.image.height}
-						blurDataURL={data.image.blurDataURL}
-						placeholder="blur"
+		<section className={cn(Styles.studio)}>
+			<Container className={cn(Styles.container)}>
+				<h2 className={cn(Styles.title, 'title title_h2')}>{data.title}</h2>
+				<div className={cn(Styles.row)}>
+					<div
+						className={cn(Styles.text, 'text text_big')}
+						dangerouslySetInnerHTML={{ __html: data.text }}
 					/>
-				</figure>
+					<figure className={cn(Styles.image)}>
+						<Image
+							src={data.image.src}
+							alt={data.image.alt}
+							width={data.image.width}
+							height={data.image.height}
+							blurDataURL={data.image.blurDataURL}
+							placeholder="blur"
+						/>
+					</figure>
+				</div>
 			</Container>
 		</section>
 	);

@@ -5,7 +5,7 @@
 	@apply mb-10 text-white;
 }
 .formObject {
-	/* @apply px-10 py-10; */
+	@apply block;
 }
 .row {
 	@apply flex items-center gap-5;
@@ -13,14 +13,14 @@
 
 .field {
 }
+
 .label {
-	@apply flex flex-col justify-start text-white;
+	@apply mb-5 flex flex-col justify-start
+	text-base text-white text-white;
 }
-.labelText {
-	@apply mb-5 text-base text-white;
-}
+
 .inputText {
-	@apply bg-input h-[52px] rounded-full px-5 text-white placeholder:text-[#CFCFCF] focus-within:outline-current focus-within:outline-white;
+	@apply h-[52px] w-full rounded-full bg-input px-5 text-white placeholder:text-[#CFCFCF] focus-within:outline-current focus-within:outline-white;
 }
 .submitW {
 }
@@ -29,5 +29,5 @@
 }
 
 .note {
-	@apply mt-2.5  text-xs text-white;
+	@apply mt-2.5 text-xs text-white;
 }

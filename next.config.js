@@ -1,6 +1,9 @@
 const path = require('node:path');
 
 const nextConfig = {
+	experimental: {
+		nextScriptWorkers: true,
+	},
 	webpack(config) {
 		config.resolve.alias = {
 			...config.resolve.alias,

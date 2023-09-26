@@ -38,7 +38,6 @@ const Header = () => {
 
 	const toggleMenu = () => {
 		setExpanded(!expanded);
-		// setIsInverted(!expanded);
 	};
 
 	const data = {

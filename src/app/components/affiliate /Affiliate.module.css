@@ -1,8 +1,48 @@
 .affiliate {
+	@apply bg-[#49588F];
 }
 
 .container {
+	@apply py-10 text-white;
 }
 
 .title {
+	@apply mb-10 text-white;
+}
+
+.row {
+	@apply flex items-center gap-4;
+}
+
+.spin {
+	/* @apply ; */
+}
+
+.list {
+	@apply ml-auto grid w-full max-w-[1120px] grid-cols-2 gap-5;
+}
+
+.item {
+	@apply bg-[#5B699A] p-5;
+
+	&:nth-child(1),
+	&:nth-child(2) {
+		@apply col-span-1;
+	}
+
+	&:nth-child(3) {
+		@apply col-span-2;
+	}
+}
+
+.itemTitle {
+	@apply mb-5 text-white;
+}
+
+.itemText {
+	@apply text-[#CFCFCF];
+}
+
+.form {
+	@apply mt-10;
 }

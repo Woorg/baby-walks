@@ -1,5 +1,5 @@
 .testimonials {
-	@apply bg-[#49588F];
+	@apply relative bg-[#49588F];
 }
 
 .container {
@@ -44,7 +44,15 @@
 }
 
 .sliderImage {
+	@apply mb-2 flex-shrink-0 flex-grow-0 lg:mb-0 lg:w-[487px] lg:flex-shrink;
 }
 
 .image {
+}
+
+.cloud {
+	@apply pointer-events-none absolute -bottom-[70px] -left-[166px]  z-10 h-[248px] w-[487px];
+	img {
+		@apply h-full w-full max-w-none;
+	}
 }

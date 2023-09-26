@@ -1,7 +1,9 @@
+import Image from 'next/image';
 import { cn } from '../../lib/utils';
 import Container from '../container/Container';
 import { FormSignUp } from '../form/Form';
 import Styles from './Advantages.module.css';
+import Cloud from '@images/general/cloud.webp';
 
 const Advantages = () => {
 	const data = {
@@ -36,6 +38,10 @@ const Advantages = () => {
 			title: 'Записаться на курс',
 			noteText: 'Нажимая отправить вы соглашаетесь с политикой конфиденциальности',
 		},
+		cloud: {
+			src: Cloud,
+			alt: 'cloud',
+		},
 	};
 
 	return (
@@ -51,8 +57,19 @@ const Advantages = () => {
 						</li>
 					))}
 				</ul>
-				<FormSignUp />
+
+				<FormSignUp className={cn(Styles.form)} />
 			</Container>
+			<figure className={cn(Styles.cloudLeft)}>
+				<Image
+					src={data.cloud.src}
+					alt={data.cloud.alt}
+					width={data.cloud.src.width}
+					height={data.cloud.src.height}
+					blurDataURL={data.cloud.src.blurDataURL}
+					placeholder="blur"
+				/>
+			</figure>
 		</section>
 	);
 };

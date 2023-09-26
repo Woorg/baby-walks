@@ -1,5 +1,5 @@
-import clsx from 'clsx';
-import cn from './Navigation.module.css';
+import { cn } from '../../lib/utils';
+import Styles from './Navigation.module.css';
 import Link from 'next/link';
 
 const Navigation = ({ className, children }) => {
@@ -22,11 +22,11 @@ const Navigation = ({ className, children }) => {
 		},
 	];
 	return (
-		<nav className={clsx(cn.navigation, '', className)}>
-			<ul className={clsx(cn.list, '')}>
+		<nav className={cn(Styles.navigation, '', className)}>
+			<ul className={cn(Styles.list, '')}>
 				{data.map((link, key) => (
-					<li key={`__${key}__`} className={clsx(cn.item, '')}>
-						<Link href={link.href} className={clsx(cn.link, 'flex px-5 py-[10px]')}>
+					<li key={`__${key}__`} className={cn(Styles.item, '')}>
+						<Link href={link.href} className={cn(Styles.link, '')}>
 							{link.name}
 						</Link>
 					</li>

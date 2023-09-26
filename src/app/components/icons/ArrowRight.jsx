@@ -1,6 +1,13 @@
+import { cn } from '../../lib/utils';
+
 const ArrowRight = ({ className }) => {
 	return (
-		<svg className={className} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 25" fill="none">
+		<svg
+			className={cn(className, 'btnArrow')}
+			xmlns="http://www.w3.org/2000/svg"
+			viewBox="0 0 36 25"
+			fill="none"
+		>
 			<path
 				d="M12.8649 12.5H26.4865"
 				stroke="#C46026"
@@ -16,6 +23,5 @@ const ArrowRight = ({ className }) => {
 		</svg>
 	);
 };
-z;
 
 export default ArrowRight;

@@ -1,0 +1,20 @@
+.studio {
+	@apply bg-[#49588F];
+}
+
+.container {
+	@apply py-10 text-white;
+}
+
+.title {
+	@apply mb-10 text-white;
+}
+.row {
+	@apply flex items-center gap-10;
+}
+.text {
+}
+
+.image {
+	@apply max-w-[435px]  flex-shrink-0;
+}

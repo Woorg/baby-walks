@@ -23,5 +23,5 @@
 }
 
 .link {
-	@apply px-2.5 font-manrope text-sm font-bold text-blue-950 xl:px-5 2xl:text-base;
+	@apply px-2.5 font-manrope text-sm font-bold text-blue-950 xl:px-5 xl:text-base;
 }

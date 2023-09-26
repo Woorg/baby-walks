@@ -1,3 +1,4 @@
+import Script from 'next/script';
 import Advantages from './components/advantages/Advantages';
 import Affiliate from './components/affiliate /Affiliate';
 import Hero from './components/hero/Hero';

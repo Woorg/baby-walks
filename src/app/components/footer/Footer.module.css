@@ -1,0 +1,17 @@
+.footer {
+	@apply pb-10;
+}
+
+.container {
+	@apply flex items-center justify-between gap-10 py-5;
+}
+
+.logo {
+}
+
+.navigation {
+}
+
+.contact {
+	margin-left: auto;
+}

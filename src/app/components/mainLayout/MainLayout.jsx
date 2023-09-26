@@ -9,7 +9,7 @@ const MainLayout = ({ children }) => {
 	const pathName = usePathname();
 
 	return (
-		<main className="main flex-grow" key={pathName}>
+		<main className="main flex-grow overflow-hidden" key={pathName}>
 			{children}
 		</main>
 	);

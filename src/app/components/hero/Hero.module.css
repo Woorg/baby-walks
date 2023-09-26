@@ -1,6 +1,8 @@
 .hero {
+	@apply relative;
 }
 .container {
+	@apply pb-10 pt-32 lg:pb-16 lg:pt-24 xl:pt-14 2xl:pb-32;
 }
 
 .intro {
@@ -21,6 +23,13 @@
 .text {
 }
 
+.clouds {
+	@apply absolute left-0 right-0 top-[497px] h-[360px] items-center overflow-hidden;
+	img {
+		@apply absolute -left-[459px] top-0 h-[448px] w-[5286px] max-w-none;
+	}
+}
+
 .basic {
 }
 
@@ -36,5 +45,38 @@
 	@apply flex-shrink-0;
 }
 
+.basicRow {
+	@apply ml-auto flex w-full max-w-[1120px] items-center gap-5;
+}
+
+.basicEntry {
+}
+
+.basicImg {
+	@apply w-[232px] flex-shrink-0;
+}
+
 .basicText {
+	@apply mb-5;
+}
+
+.cloudTop {
+	@apply pointer-events-none absolute -left-[73px] -top-[53px]  z-10  h-[330px] w-[650px] overflow-hidden;
+	img {
+		@apply h-full w-full max-w-none;
+	}
+}
+
+.cloudLeft {
+	@apply pointer-events-none absolute -left-[69px] bottom-[20px] h-[248px] w-[487px];
+	img {
+		@apply h-full w-full max-w-none;
+	}
+}
+
+.cloudRight {
+	@apply pointer-events-none absolute -bottom-[180px] -right-[289px] h-[330px] w-[650px];
+	img {
+		@apply h-full w-full max-w-none;
+	}
 }

@@ -1,5 +1,5 @@
 .advantages {
-	@apply bg-[#49588F];
+	@apply relative bg-[#49588F];
 }
 
 .container {
@@ -55,4 +55,11 @@
 
 .itemText {
 	@apply text-[#CFCFCF];
+}
+
+.cloudLeft {
+	@apply pointer-events-none absolute -bottom-[200px]  -left-[260px] h-[330px] w-[650px] -scale-x-[1];
+	img {
+		@apply h-full w-full max-w-none;
+	}
 }

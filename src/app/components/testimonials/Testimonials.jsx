@@ -17,12 +17,9 @@ import Img9 from '@images/content/testimonials/testimImg-9.webp';
 import Img10 from '@images/content/testimonials/testimImg-10.webp';
 import 'swiper/css';
 import SliderButton from '../icons/SliderButton';
-import { useRef } from 'react';
+import CloudImg from '@images/general/cloud.webp';
 
 const Testimonials = () => {
-	const navigationPrevRef = useRef(null);
-	const navigationNextRef = useRef(null);
-
 	const data = {
 		title: 'Отзывы',
 		slider: [
@@ -87,6 +84,10 @@ const Testimonials = () => {
 				},
 			},
 		],
+		cloud: {
+			src: CloudImg,
+			alt: 'cloud ',
+		},
 	};
 
 	return (
@@ -112,40 +113,28 @@ const Testimonials = () => {
 							// },
 						}}
 						navigation={{
-							prevEl: navigationPrevRef.current,
-							nextEl: navigationNextRef.current,
-						}}
-						onSwiper={(swiper) => {
-							// Delay execution for the refs to be defined
-							setTimeout(() => {
-								// Override prevEl & nextEl now that refs are defined
-								swiper.params.navigation.prevEl = navigationPrevRef.current;
-								swiper.params.navigation.nextEl = navigationNextRef.current;
-
-								// Re-init navigation
-								swiper.navigation.destroy();
-								swiper.navigation.init();
-								swiper.navigation.update();
-							});
+							prevEl: '.slider-button_prev',
+							nextEl: '.slider-button_next',
 						}}
 					>
 						<div className={cn(Styles.nav, 'w-36 lg:w-auto')}>
-							<button className={cn(Styles.sliderPrev)} aria-label="Назад" ref={navigationPrevRef}>
+							<button
+								className={cn(Styles.sliderPrev, 'slider-button slider-button_prev')}
+								aria-label="Назад"
+							>
 								<SliderButton className={cn('h-16 w-16')} />
 							</button>
-							<button className={cn(Styles.sliderNext)} aria-label="Вперед" ref={navigationNextRef}>
+							<button
+								className={cn(Styles.sliderNext, 'slider-button slider-button_next')}
+								aria-label="Вперед"
+							>
 								<SliderButton className={cn('h-16 w-16')} />
 							</button>
 						</div>
 
 						{data.slider.map((slide, key) => (
 							<SwiperSlide key={`__${key}__`} className={cn(Styles.sliderSlide, 'px-2 lg:px-2')}>
-								<figure
-									className={cn(
-										Styles.sliderImage,
-										'mb-2 flex-shrink-0 flex-grow-0 lg:mb-0 lg:w-[487px] lg:flex-shrink',
-									)}
-								>
+								<figure className={cn(Styles.sliderImage, '')}>
 									<Image
 										className={cn(Styles.image, 'hidden lg:block')}
 										src={slide.image.src}
@@ -160,6 +149,17 @@ const Testimonials = () => {
 						))}
 					</Swiper>
 				</div>
+
+				<figure className={cn(Styles.cloud)}>
+					<Image
+						src={data.cloud.src}
+						alt={data.cloud.alt}
+						width={data.cloud.src.width}
+						height={data.cloud.src.height}
+						blurDataURL={data.cloud.src.blurDataURL}
+						placeholder="blur"
+					/>
+				</figure>
 			</Container>
 		</section>
 	);
