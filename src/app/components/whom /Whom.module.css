@@ -1,32 +1,36 @@
 .whom {
-	@apply relative;
+	/* @apply relative; */
 }
 
 .container {
-	@apply py-20;
+	@apply relative lg:py-10 2xl:py-20;
 }
 
 .row {
-	@apply flex items-center gap-[136px];
+	@apply flex items-center lg:gap-4 2xl:gap-[136px];
 }
 
 .entry {
+	@apply ml-auto w-full lg:max-w-[482px] 2xl:max-w-[667px];
 }
 
 .image {
-	@apply relative h-[612px] w-[591px];
+	@apply relative lg:h-[586px] lg:w-[482px]  2xl:h-[612px] 2xl:w-[591px];
+	img {
+		/* @apply h-full w-full max-w-none; */
+	}
 }
 
 .spin {
-	@apply absolute -top-[58px] right-1;
+	@apply absolute right-1 lg:top-0 2xl:-top-[58px];
 }
 
 .title {
-	@apply mb-5;
+	@apply lg:mb-2.5 2xl:mb-5;
 }
 
 .text {
-	@apply mb-10;
+	@apply text-xs lg:mb-5 lg:text-sm 2xl:mb-10 2xl:text-xl;
 }
 
 .widget {
@@ -38,7 +42,7 @@
 }
 
 .cloud {
-	@apply pointer-events-none absolute -bottom-[160px] -right-[146px]  z-10 h-[248px] w-[487px];
+	@apply pointer-events-none absolute -bottom-[160px] -right-[146px] z-10 hidden  h-[248px] w-[487px] 2xl:block;
 	img {
 		@apply h-full w-full max-w-none;
 	}

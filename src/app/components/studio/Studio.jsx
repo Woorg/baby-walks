@@ -1,8 +1,8 @@
-import Container from '../container/Container';
-import Image from 'next/image';
 import StudioImg from '@images/content/studio-img.webp';
-import Styles from './Studio.module.css';
+import Image from 'next/image';
 import { cn } from '../../lib/utils';
+import Container from '../container/Container';
+import Styles from './Studio.module.css';
 
 const data = {
 	title: 'Описание студии',

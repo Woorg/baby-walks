@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@builder.io/partytown": "^0.8.1",
+    "@ianvs/prettier-plugin-sort-imports": "^4.1.0",
     "autoprefixer": "10.4.15",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0",

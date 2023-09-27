@@ -117,18 +117,18 @@ const Testimonials = () => {
 							nextEl: '.slider-button_next',
 						}}
 					>
-						<div className={cn(Styles.nav, 'w-36 lg:w-auto')}>
+						<div className={cn(Styles.nav, '')}>
 							<button
 								className={cn(Styles.sliderPrev, 'slider-button slider-button_prev')}
 								aria-label="Назад"
 							>
-								<SliderButton className={cn('h-16 w-16')} />
+								<SliderButton className={cn('')} />
 							</button>
 							<button
 								className={cn(Styles.sliderNext, 'slider-button slider-button_next')}
 								aria-label="Вперед"
 							>
-								<SliderButton className={cn('h-16 w-16')} />
+								<SliderButton className={cn('')} />
 							</button>
 						</div>
 

@@ -51,7 +51,7 @@ const Program = () => {
 								<div className={cn(Styles.num)}>{`0${key + 1}`}</div>
 								<div className={cn(Styles.entry)}>
 									<h3 className={cn(Styles.entryTitle, 'title title_h3')}>{item.title}</h3>
-									<div className={cn(Styles.entryText)}>{item.text}</div>
+									<div className={cn(Styles.entryText, 'text')}>{item.text}</div>
 								</div>
 							</li>
 						))}

@@ -3,10 +3,11 @@
 }
 
 .container {
-	@apply flex items-center justify-between gap-10 py-5;
+	@apply flex items-center justify-between py-5 lg:gap-5 2xl:gap-10;
 }
 
 .logo {
+	@apply lg:h-[54px] lg:w-[52px] 2xl:h-[72px] 2xl:h-[74px];
 }
 
 .navigation {

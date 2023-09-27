@@ -28,12 +28,12 @@ const Affiliate = () => {
 			<Container className={cn(Styles.container)}>
 				<h2 className={cn(Styles.title, 'title title_h2')}>{data.title}</h2>
 				<div className={cn(Styles.row)}>
-					<SpinIcon invert={true} className={cn(Styles.spin)} />
+					<SpinIcon invert={true} className={cn(Styles.spin, 'spin-logo_mid')} />
 					<ul className={cn(Styles.list)}>
 						{data.list.map((item, key) => (
 							<li key={`__${key}__`} className={cn(Styles.item)}>
 								<h3 className={cn(Styles.itemTitle, 'title title_h3')}>{item.title}</h3>
-								<div className={cn(Styles.itemText)}>{item.text}</div>
+								<div className={cn(Styles.itemText, 'text')}>{item.text}</div>
 							</li>
 						))}
 					</ul>

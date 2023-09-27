@@ -1,7 +1,7 @@
-import Image from 'next/image';
-import { cn } from '../../lib/utils';
 import spinLogo from '@images/general/spinLogo/spinLogo.webp';
 import spinLogoWhite from '@images/general/spinLogo/spinLogoWhite.webp';
+import Image from 'next/image';
+import { cn } from '../../lib/utils';
 
 export const SpinIcon = ({ invert = false, className }) => {
 	const data = {
@@ -16,7 +16,7 @@ export const SpinIcon = ({ invert = false, className }) => {
 	};
 
 	return (
-		<figure className={cn(className, 'spin-logo ')}>
+		<div className={cn(className, 'spin-logo ')}>
 			<svg
 				className={cn('spin-logo__letters', {
 					'text-white': invert,
@@ -300,6 +300,6 @@ export const SpinIcon = ({ invert = false, className }) => {
 					placeholder="blur"
 				/>
 			)}
-		</figure>
+		</div>
 	);
 };

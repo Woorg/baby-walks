@@ -54,6 +54,8 @@ module.exports = {
 			},
 			backgroundImage: {
 				'gradient-button': 'linear-gradient(93deg, #ffe8db -108.14%, #fccdb1 90.48%)',
+				circle:
+					'radial-gradient(50% 50% at 50% 50%, #FFF 0%, #FDF4EC 58.33%, rgba(253, 244, 236, 0.00) 97.4%)',
 			},
 			boxShadow: {
 				btn: '0px 0px 20px 0px #CE8C65',

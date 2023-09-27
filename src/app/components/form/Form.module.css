@@ -1,26 +1,26 @@
 .form {
-	@apply bg-white bg-opacity-10 px-10 py-10;
+	@apply bg-white bg-opacity-10 lg:p-5   2xl:p-10;
 }
 .title {
-	@apply mb-10 text-white;
+	@apply text-white lg:mb-5 2xl:mb-10;
 }
 .formObject {
 	@apply block;
 }
 .row {
-	@apply flex items-center gap-5;
+	@apply flex items-center lg:gap-2.5 2xl:gap-5;
 }
 
 .field {
 }
 
 .label {
-	@apply mb-5 flex flex-col justify-start
-	text-base text-white text-white;
+	@apply flex flex-col justify-start text-xs
+	text-white lg:mb-2.5 lg:text-sm 2xl:mb-5 2xl:text-base;
 }
 
 .inputText {
-	@apply h-[52px] w-full rounded-full bg-input px-5 text-white placeholder:text-[#CFCFCF] focus-within:outline-current focus-within:outline-white;
+	@apply h-10 h-[52px] w-full rounded-full bg-input px-5 text-[10px] text-white placeholder:text-[#CFCFCF] focus-within:outline-current focus-within:outline-white lg:h-[49px] lg:text-xs 2xl:h-[52px] 2xl:text-base;
 }
 .submitW {
 }
@@ -29,5 +29,5 @@
 }
 
 .note {
-	@apply mt-2.5 text-xs text-white;
+	@apply mt-2.5 text-xs tracking-tight text-white;
 }

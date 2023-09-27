@@ -1,13 +1,13 @@
 .testimonials {
-	@apply relative bg-[#49588F];
+	@apply bg-[#49588F];
 }
 
 .container {
-	@apply py-10;
+	@apply relative py-10;
 }
 
 .title {
-	@apply mb-10 text-white;
+	@apply text-white lg:mb-5 2xl:mb-10;
 }
 
 .slider {
@@ -21,12 +21,12 @@
 }
 
 .nav {
-	@apply relative z-10 -order-1 mb-10 flex justify-end gap-5;
+	@apply relative z-10 -order-1 flex justify-end gap-5 lg:mb-5 2xl:mb-10;
 }
 
 .sliderPrev,
 .sliderNext {
-	@apply text-[#7592FF] transition-opacity;
+	@apply text-[#7592FF] transition-opacity  lg:w-[41px] lg:w-[41px]   2xl:w-[50px] 2xl:w-[50px];
 	&[disabled] {
 		@apply opacity-30;
 	}
@@ -40,18 +40,18 @@
 }
 
 .sliderSlide {
-	@apply w-[calc(302px+8px)] lg:w-[calc(230px+20px)];
+	@apply w-[calc(120px+20px)] lg:w-[calc(152px+10px)]  2xl:w-[calc(230px+20px)];
 }
 
 .sliderImage {
-	@apply mb-2 flex-shrink-0 flex-grow-0 lg:mb-0 lg:w-[487px] lg:flex-shrink;
+	@apply mb-2 w-[120px] flex-shrink-0 flex-grow-0 lg:mb-0 lg:w-[152px] lg:flex-shrink 2xl:w-[487px];
 }
 
 .image {
 }
 
 .cloud {
-	@apply pointer-events-none absolute -bottom-[70px] -left-[166px]  z-10 h-[248px] w-[487px];
+	@apply pointer-events-none absolute z-10  lg:-bottom-[100px] lg:-left-[38px] lg:h-[184px]  lg:w-[360px] 2xl:-bottom-[70px] 2xl:-left-[166px] 2xl:h-[248px] 2xl:w-[487px];
 	img {
 		@apply h-full w-full max-w-none;
 	}

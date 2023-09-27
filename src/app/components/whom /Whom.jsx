@@ -1,14 +1,14 @@
 'use client';
 
-import Script from 'next/script';
-import { cn } from '../../lib/utils';
-import Container from '../container/Container';
-import Styles from './Whom.module.css';
-import Iframe from 'react-iframe';
 import Cloud from '@images/general/cloud.webp';
 import WhomImg from '@images/general/whom/whoImg.webp';
 import Image from 'next/image';
+import Script from 'next/script';
+import Iframe from 'react-iframe';
+import { cn } from '../../lib/utils';
+import Container from '../container/Container';
 import { SpinIcon } from '../icons/SpinIcon';
+import Styles from './Whom.module.css';
 
 const Whom = ({ children }) => {
 	const data = {
@@ -44,7 +44,7 @@ const Whom = ({ children }) => {
 			<Container className={cn(Styles.container)}>
 				<div className={cn(Styles.row)}>
 					<figure className={cn(Styles.image)}>
-						<SpinIcon className={cn(Styles.spin)} />
+						<SpinIcon className={cn(Styles.spin, 'spin-logo_small')} />
 						<Image
 							src={data.image.src}
 							alt={data.image.alt}
@@ -55,7 +55,7 @@ const Whom = ({ children }) => {
 						/>
 					</figure>
 
-					<div className={cn(Styles.entry, 'ml-auto w-full max-w-[667px]')}>
+					<div className={cn(Styles.entry, '')}>
 						<h2 className={cn(Styles.title, 'title title_h2')}>{data.title}</h2>
 						<div className={cn(Styles.text, 'text text_big')}>{data.text}</div>
 

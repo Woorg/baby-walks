@@ -1,12 +1,12 @@
 .hero {
-	@apply relative;
+	/* @apply relative; */
 }
 .container {
-	@apply pb-10 pt-32 lg:pb-16 lg:pt-24 xl:pt-14 2xl:pb-32;
+	@apply relative pb-10 pt-32 lg:pb-10 lg:pt-32 xl:pt-14 2xl:pb-32;
 }
 
 .intro {
-	@apply mb-36 flex items-center;
+	@apply mb-36 flex flex-wrap items-center 2xl:flex-nowrap;
 }
 
 .introEntry {
@@ -14,17 +14,19 @@
 }
 
 .introImg {
-	@apply ml-auto h-[678px] w-[428px];
+	@apply ml-auto h-[483px] w-[310px]  lg:h-[971px] lg:w-[624px] 2xl:h-[678px] 2xl:w-[428px];
 }
 
 .title {
+	@apply mb-7;
 }
 
 .text {
+	@apply lg:max-w-[540px] 2xl:max-w-[794px];
 }
 
 .clouds {
-	@apply absolute left-0 right-0 top-[497px] h-[360px] items-center overflow-hidden;
+	@apply absolute right-0 top-[1143px] h-[360px] items-center  overflow-hidden lg:-left-[200px] 2xl:left-0 2xl:top-[497px];
 	img {
 		@apply absolute -left-[459px] top-0 h-[448px] w-[5286px] max-w-none;
 	}
@@ -34,7 +36,7 @@
 }
 
 .basicHeading {
-	@apply mb-8 flex flex-wrap gap-x-4 xl:flex-nowrap;
+	@apply mb-8 flex flex-wrap gap-x-4 lg:flex-nowrap;
 }
 
 .basicTitle {
@@ -53,29 +55,29 @@
 }
 
 .basicImg {
-	@apply w-[232px] flex-shrink-0;
+	@apply flex-shrink-0 lg:w-[179px] 2xl:w-[232px];
 }
 
 .basicText {
-	@apply mb-5;
+	@apply mb-5 lg:text-base 2xl:text-xl;
 }
 
 .cloudTop {
-	@apply pointer-events-none absolute -left-[73px] -top-[53px]  z-10  h-[330px] w-[650px] overflow-hidden;
+	@apply pointer-events-none absolute z-10 h-[330px] w-[650px] overflow-hidden  lg:-left-[359px] lg:top-[578px] 2xl:-left-[73px] 2xl:-top-[53px];
 	img {
 		@apply h-full w-full max-w-none;
 	}
 }
 
 .cloudLeft {
-	@apply pointer-events-none absolute -left-[69px] bottom-[20px] h-[248px] w-[487px];
+	@apply pointer-events-none absolute lg:-bottom-20 lg:-left-[104px] lg:h-[182px] lg:w-[359px] 2xl:-left-[69px] 2xl:bottom-[20px] 2xl:h-[248px] 2xl:w-[487px];
 	img {
 		@apply h-full w-full max-w-none;
 	}
 }
 
 .cloudRight {
-	@apply pointer-events-none absolute -bottom-[180px] -right-[289px] h-[330px] w-[650px];
+	@apply pointer-events-none absolute -bottom-[180px] -right-[289px] hidden h-[330px] w-[650px] 2xl:block;
 	img {
 		@apply h-full w-full max-w-none;
 	}

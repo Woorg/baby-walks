@@ -59,17 +59,17 @@ const Advantages = () => {
 				</ul>
 
 				<FormSignUp className={cn(Styles.form)} />
+				<figure className={cn(Styles.cloudLeft)}>
+					<Image
+						src={data.cloud.src}
+						alt={data.cloud.alt}
+						width={data.cloud.src.width}
+						height={data.cloud.src.height}
+						blurDataURL={data.cloud.src.blurDataURL}
+						placeholder="blur"
+					/>
+				</figure>
 			</Container>
-			<figure className={cn(Styles.cloudLeft)}>
-				<Image
-					src={data.cloud.src}
-					alt={data.cloud.alt}
-					width={data.cloud.src.width}
-					height={data.cloud.src.height}
-					blurDataURL={data.cloud.src.blurDataURL}
-					placeholder="blur"
-				/>
-			</figure>
 		</section>
 	);
 };

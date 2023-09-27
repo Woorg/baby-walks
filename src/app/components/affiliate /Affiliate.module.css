@@ -3,11 +3,11 @@
 }
 
 .container {
-	@apply py-10 text-white;
+	@apply text-white lg:pb-5 lg:pt-10 2xl:py-10;
 }
 
 .title {
-	@apply mb-10 text-white;
+	@apply text-white lg:mb-5 2xl:mb-10;
 }
 
 .row {
@@ -19,24 +19,27 @@
 }
 
 .list {
-	@apply ml-auto grid w-full max-w-[1120px] grid-cols-2 gap-5;
+	@apply ml-auto w-full max-w-[1120px] grid-cols-2 gap-5 2xl:grid;
 }
 
 .item {
-	@apply bg-[#5B699A] p-5;
+	@apply mb-2.5 bg-[#5B699A] p-5  2xl:mb-0;
 
 	&:nth-child(1),
 	&:nth-child(2) {
-		@apply col-span-1;
+		@apply 2xl:col-span-1;
 	}
 
 	&:nth-child(3) {
-		@apply col-span-2;
+		@apply 2xl:col-span-2;
+	}
+	&:last-child {
+		@apply mb-0;
 	}
 }
 
 .itemTitle {
-	@apply mb-5 text-white;
+	@apply text-white lg:mb-3 2xl:mb-5;
 }
 
 .itemText {

@@ -1,10 +1,10 @@
 'use client';
 
 // import { useState } from 'react';
-import { cn } from '../../lib/utils';
-import Styles from './Form.module.css';
 import { useForm } from 'react-hook-form';
 import { useHookFormMask } from 'use-mask-input';
+import { cn } from '../../lib/utils';
+import Styles from './Form.module.css';
 
 export const FormSignUp = ({ className }) => {
 	const { register, control, handleSubmit } = useForm();
@@ -24,12 +24,12 @@ export const FormSignUp = ({ className }) => {
 				<h2 className={cn(Styles.title, 'title title_h2')}>{data.title}</h2>
 				<form className={cn(Styles.formObject)} onSubmit={handleSubmit(onSubmit)}>
 					<div className={cn(Styles.row)}>
-						<div className={cn(Styles.field, 'w-full max-w-[453px]')}>
-							<label className={cn(Styles.label)} htmlFor="name">
+						<div className={cn(Styles.field, 'lg:max-w-300px w-full 2xl:max-w-[453px]')}>
+							<label className={cn(Styles.label)} htmlFor="nameSignUp">
 								Ваше имя
 							</label>
 							<input
-								id="name"
+								id="nameSignUp"
 								className={cn(Styles.inputText)}
 								{...register('name', {
 									required: true,
@@ -38,12 +38,12 @@ export const FormSignUp = ({ className }) => {
 							/>
 						</div>
 
-						<div className={cn(Styles.field, 'w-full max-w-[453px]')}>
-							<label className={cn(Styles.label)} htmlFor="phone">
+						<div className={cn(Styles.field, 'lg:max-w-300px w-full 2xl:max-w-[453px]')}>
+							<label className={cn(Styles.label)} htmlFor="phoneSignUp">
 								Номер телефона *
 							</label>
 							<input
-								id="phone"
+								id="phoneSignUp"
 								className={cn(Styles.inputText)}
 								{...registerWithMask('phone', ['+7 (___) ___-__-__', '+7 (999) 999-99-99'], {
 									required: true,
@@ -52,7 +52,7 @@ export const FormSignUp = ({ className }) => {
 							/>
 						</div>
 
-						<div className={cn(Styles.submitW)}>
+						<div className={cn(Styles.submitW, 'w-full lg:max-w-[322px] ')}>
 							<button type="submit" className={cn(Styles.submit, 'btn btn_big btn_full')}>
 								Отправить
 							</button>
@@ -85,12 +85,12 @@ export const FormAffiliate = ({ className }) => {
 				<h2 className={cn(Styles.title, 'title title_h2')}>{data.title}</h2>
 				<form className={cn(Styles.formObject)} onSubmit={handleSubmit(onSubmit)}>
 					<div className={cn(Styles.row)}>
-						<div className={cn(Styles.field, 'w-full max-w-[302px]')}>
-							<label className={cn(Styles.label)} htmlFor="name">
+						<div className={cn(Styles.field, 'w-full lg:max-w-[229px] 2xl:max-w-[302px]')}>
+							<label className={cn(Styles.label)} htmlFor="nameAffiliate">
 								Ваше имя
 							</label>
 							<input
-								id="name"
+								id="nameAffiliate"
 								className={cn(Styles.inputText)}
 								{...register('name', {
 									required: true,
@@ -99,12 +99,12 @@ export const FormAffiliate = ({ className }) => {
 							/>
 						</div>
 
-						<div className={cn(Styles.field, 'w-full max-w-[302px]')}>
-							<label className={cn(Styles.label)} htmlFor="phone">
+						<div className={cn(Styles.field, 'w-full lg:max-w-[229px] 2xl:max-w-[302px]')}>
+							<label className={cn(Styles.label)} htmlFor="phoneAffiliate">
 								Номер телефона *
 							</label>
 							<input
-								id="phone"
+								id="phoneAffiliate"
 								className={cn(Styles.inputText)}
 								{...registerWithMask('phone', ['+7 (___) ___-__-__', '+7 (999) 999-99-99'], {
 									required: true,
@@ -113,12 +113,12 @@ export const FormAffiliate = ({ className }) => {
 							/>
 						</div>
 
-						<div className={cn(Styles.field, 'w-full max-w-[302px]')}>
-							<label className={cn(Styles.label)} htmlFor="message">
+						<div className={cn(Styles.field, 'w-full lg:max-w-[229px] 2xl:max-w-[302px]')}>
+							<label className={cn(Styles.label)} htmlFor="messageAffiliate">
 								Комментарий
 							</label>
 							<input
-								id="message"
+								id="messageAffiliate"
 								className={cn(Styles.inputText)}
 								{...register('message', {
 									required: true,
@@ -127,13 +127,19 @@ export const FormAffiliate = ({ className }) => {
 							/>
 						</div>
 
-						<div className={cn(Styles.submitW)}>
-							<button type="submit" className={cn(Styles.submit, 'btn  btn_big btn_full')}>
+						<div className={cn(Styles.submitW, '2xl:max-w-[229px lg:max-w-[229px]')}>
+							<button
+								type="submit"
+								className={cn(
+									Styles.submit,
+									'btn  btn_big btn_full  transition-all hover:shadow-btn',
+								)}
+							>
 								Стать партнёром
 							</button>
-							<small className={cn(Styles.note)}>
+							<p className={cn(Styles.note)}>
 								Нажимая отправить вы соглашаетесь с политикой конфиденциальности
-							</small>
+							</p>
 						</div>
 					</div>
 				</form>

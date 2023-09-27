@@ -3,18 +3,19 @@
 }
 
 .container {
-	@apply py-10 text-white;
+	@apply text-white lg:pb-10 lg:pt-5 2xl:py-10;
 }
 
 .title {
-	@apply mb-10 text-white;
+	@apply text-white lg:mb-5 2xl:mb-10;
 }
 .row {
-	@apply flex items-center gap-10;
+	@apply flex items-center lg:gap-5 2xl:gap-10;
 }
 .text {
+	@apply text-xs lg:text-base 2xl:text-xl;
 }
 
 .image {
-	@apply max-w-[435px]  flex-shrink-0;
+	@apply flex-shrink-0 lg:max-w-[368px]  2xl:max-w-[435px];
 }

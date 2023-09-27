@@ -53,18 +53,17 @@ const Hero = () => {
 
 	return (
 		<section className={cn(Styles.hero)}>
-			<figure className={cn(Styles.cloudTop)}>
-				<Image
-					src={data.cloud.src}
-					alt={data.cloud.alt}
-					width={data.cloud.src.width}
-					height={data.cloud.src.height}
-					blurDataURL={data.cloud.src.blurDataURL}
-					placeholder="blur"
-				/>
-			</figure>
-
 			<Container className={cn(Styles.container, '')}>
+				<figure className={cn(Styles.cloudTop)}>
+					<Image
+						src={data.cloud.src}
+						alt={data.cloud.alt}
+						width={data.cloud.src.width}
+						height={data.cloud.src.height}
+						blurDataURL={data.cloud.src.blurDataURL}
+						placeholder="blur"
+					/>
+				</figure>
 				<div className={cn(Styles.intro)}>
 					<div className={cn(Styles.introEntry)}>
 						<h1 className={cn(Styles.title, 'title')}>{data.intro.title}</h1>
@@ -123,6 +122,28 @@ const Hero = () => {
 						</div>
 					</div>
 				</div>
+
+				<figure className={cn(Styles.cloudLeft)}>
+					<Image
+						src={data.cloud.src}
+						alt={data.cloud.alt}
+						width={data.cloud.src.width}
+						height={data.cloud.src.height}
+						blurDataURL={data.cloud.src.blurDataURL}
+						placeholder="blur"
+					/>
+				</figure>
+
+				<figure className={cn(Styles.cloudRight)}>
+					<Image
+						src={data.cloud.src}
+						alt={data.cloud.alt}
+						width={data.cloud.src.width}
+						height={data.cloud.src.height}
+						blurDataURL={data.cloud.src.blurDataURL}
+						placeholder="blur"
+					/>
+				</figure>
 			</Container>
 
 			<figure className={cn(Styles.clouds)}>
@@ -132,28 +153,6 @@ const Hero = () => {
 					width={data.clouds.src.width}
 					height={data.clouds.src.height}
 					blurDataURL={data.clouds.src.blurDataURL}
-					placeholder="blur"
-				/>
-			</figure>
-
-			<figure className={cn(Styles.cloudLeft)}>
-				<Image
-					src={data.cloud.src}
-					alt={data.cloud.alt}
-					width={data.cloud.src.width}
-					height={data.cloud.src.height}
-					blurDataURL={data.cloud.src.blurDataURL}
-					placeholder="blur"
-				/>
-			</figure>
-
-			<figure className={cn(Styles.cloudRight)}>
-				<Image
-					src={data.cloud.src}
-					alt={data.cloud.alt}
-					width={data.cloud.src.width}
-					height={data.cloud.src.height}
-					blurDataURL={data.cloud.src.blurDataURL}
 					placeholder="blur"
 				/>
 			</figure>

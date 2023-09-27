@@ -6,11 +6,11 @@
 
 @layer components {
 	.btn {
-		@apply inline-flex  items-center justify-center rounded-[200px] rounded-full border border-[#FFCCAE] bg-gradient-button text-base font-bold  text-amber-700 transition-all;
+		@apply inline-flex  items-center justify-center rounded-[200px] rounded-full border border-[#FFCCAE] bg-gradient-button text-xs font-bold text-amber-700 transition-all  lg:text-sm 2xl:text-base;
 	}
 
 	.btn_big {
-		@apply h-[52px] px-[30px] py-2.5;
+		@apply h-[52px] px-5 py-2.5 2xl:px-[30px];
 	}
 
 	.btn_general {
@@ -30,26 +30,26 @@
 	}
 
 	.title {
-		@apply font-cormorant-infant text-6xl font-semibold uppercase text-blue-950;
+		@apply font-cormorant-infant text-4xl font-semibold uppercase leading-[1.1] text-blue-950 lg:text-[56px] 2xl:text-6xl;
 	}
 
 	.title_h2 {
-		@apply font-noto-serif text-[44px] font-normal leading-normal;
+		@apply font-noto-serif text-[22px]  font-normal leading-normal lg:text-4xl 2xl:text-[44px];
 	}
 
 	.title_h3 {
-		@apply font-manrope text-2xl font-bold normal-case leading-normal;
+		@apply font-manrope font-bold normal-case leading-normal lg:text-xl 2xl:text-2xl;
 	}
 
 	.text {
-		@apply text-base font-normal;
+		@apply text-xs font-normal lg:text-sm 2xl:text-base;
 	}
 	.text_big {
-		@apply text-xl font-light;
+		@apply text-xs font-light lg:text-xl;
 	}
 
 	.spin-logo {
-		@apply relative flex h-[211px] w-[211px] items-center justify-center;
+		@apply relative flex h-[211px] w-[211px] shrink-0 items-center justify-center;
 	}
 	.spin-logo__letters {
 		@apply absolute left-1/2 top-1/2 h-[193px] w-[193px] -translate-x-1/2 -translate-y-1/2;
@@ -58,5 +58,24 @@
 		@apply absolute left-1/2 top-1/2 h-[126px] w-[126px]  -translate-x-1/2 -translate-y-1/2;
 	}
 
-	
+	.sping-logo_mid,
+	.spin-logo_small {
+		@apply h-[130px] w-[130px] lg:h-[168px] lg:w-[168px] 2xl:h-[211px] 2xl:w-[211px];
+		.spin-logo__letters {
+			@apply h-[113px] w-[113px] lg:h-[146px] lg:w-[146px]  2xl:h-[193px] 2xl:w-[193px];
+		}
+		.spin-logo__image {
+			@apply absolute left-1/2 top-1/2 h-[84px] w-[78px] -translate-x-1/2 -translate-y-1/2  lg:h-[108px] lg:w-[100px]  2xl:h-[126px] 2xl:w-[126px];
+		}
+	}
+
+	.spin-logo_mid {
+		@apply h-[168px] w-[168px] 2xl:h-[211px] 2xl:w-[211px];
+		.spin-logo__letters {
+			@apply h-[113px] w-[113px] lg:h-[146px] lg:w-[146px]  2xl:h-[193px] 2xl:w-[193px];
+		}
+		.spin-logo__image {
+			@apply absolute left-1/2 top-1/2 h-[84px] w-[78px] -translate-x-1/2 -translate-y-1/2  lg:h-[108px] lg:w-[100px]  2xl:h-[126px] 2xl:w-[126px];
+		}
+	}
 }
