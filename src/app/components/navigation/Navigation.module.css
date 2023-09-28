@@ -1,21 +1,20 @@
 .navigation {
-	/* @apply; */
-}
-
-.container {
 }
 
 .list {
-	@apply flex;
+	@apply flex flex-wrap lg:flex-row lg:flex-nowrap;
 }
 
 .item {
+	@apply mb-2 lg:mb-0;
 	&:first-child {
 		.link {
 			@apply lg:pl-0 xl:pl-5;
 		}
 	}
 	&:last-child {
+		@apply w-full;
+
 		.link {
 			@apply lg:pr-0 xl:pr-5;
 		}

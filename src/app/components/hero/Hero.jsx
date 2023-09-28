@@ -1,13 +1,13 @@
+import CloudImg from '@images/general/cloud.webp';
+import Clouds from '@images/general/hero/heroClouds.webp';
+import IntroImg from '@images/general/hero/heroImg.webp';
+import BabyImg from '@images/general/hero/heroImgBaby.webp';
 import Image from 'next/image';
 import { cn } from '../../lib/utils';
-import Container from '../container/Container';
-import SpinLogo from '@images/general/spin-logo.webp';
-import IntroImg from '@images/general/hero/heroImg.webp';
-import Styles from './Hero.module.css';
-import Clouds from '@images/general/hero/heroClouds.webp';
-import BabyImg from '@images/general/hero/heroImgBaby.webp';
 import Button from '../button/Button';
-import CloudImg from '@images/general/cloud.webp';
+import Container from '../container/Container';
+import { SpinIcon } from '../icons/SpinIcon';
+import Styles from './Hero.module.css';
 
 const Hero = () => {
 	const data = {
@@ -27,10 +27,6 @@ const Hero = () => {
 		basic: {
 			title:
 				'Курс по уходу за ребёнком от 0 до 12 месяцев, сделанный с помощью искусственного интеллекта (ИИ)',
-			spin: {
-				src: SpinLogo,
-				alt: 'Spin logo',
-			},
 			babyImg: {
 				src: BabyImg,
 				alt: 'baby image',
@@ -84,16 +80,8 @@ const Hero = () => {
 				<div className={cn(Styles.basic, '')}>
 					<div className={cn(Styles.basicHeading)}>
 						<h2 className={cn(Styles.basicTitle, 'title title_h2 ')}>{data.basic.title}</h2>
-						<figure className={cn(Styles.spin)}>
-							<Image
-								src={data.basic.spin.src}
-								alt={data.basic.spin.alt}
-								width={data.basic.spin.src.width}
-								height={data.basic.spin.src.height}
-								blurDataURL={data.basic.spin.src.blurDataURL}
-								placeholder="blur"
-							/>
-						</figure>
+
+						<SpinIcon className={cn(Styles.spin, 'spin-logo_small')} />
 					</div>
 
 					<div className={cn(Styles.basicRow)}>
@@ -107,19 +95,19 @@ const Hero = () => {
 								placeholder="blur"
 							/>
 						</figure>
-						<div className={cn(Styles.basicEntry)}>
-							<div
-								className={cn(Styles.basicText, 'text text_big')}
-								dangerouslySetInnerHTML={basicText}
-							></div>
-							<Button
-								arrow={true}
-								href={data.basic.button.link}
-								className={cn(Styles.basicButton, 'btn btn_general btn_icon')}
-							>
-								{data.basic.button.text}
-							</Button>
-						</div>
+						{/* <div className={cn(Styles.basicEntry)}> */}
+						<div
+							className={cn(Styles.basicText, 'text ')}
+							dangerouslySetInnerHTML={basicText}
+						></div>
+						<Button
+							arrow={true}
+							href={data.basic.button.link}
+							className={cn(Styles.basicButton, 'btn btn_general btn_icon')}
+						>
+							{data.basic.button.text}
+						</Button>
+						{/* </div> */}
 					</div>
 				</div>
 

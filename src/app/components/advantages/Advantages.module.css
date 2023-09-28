@@ -3,19 +3,33 @@
 }
 
 .container {
-	@apply relative py-10;
+	@apply relative py-5 lg:py-10;
 }
 
 .title {
-	@apply lg:mb-5 2xl:mb-10;
+	@apply mb-5 2xl:mb-10;
 }
 
 .list {
-	@apply grid grid-cols-3 gap-5 lg:mb-5 2xl:mb-10;
+	@apply grid-cols-3 gap-y-5 lg:mb-5 lg:grid 2xl:mb-10;
 }
 
 .item {
-	@apply relative lg:py-5;
+	@apply relative grid items-baseline border-t border-white border-opacity-20 py-5 lg:block lg:items-start lg:border-none lg:py-5;
+	display: grid;
+	grid-template-columns: 0.5fr 1fr 1fr;
+	grid-template-rows: min-content min-content;
+	gap: 20px 20px;
+	grid-template-areas:
+		'num title title'
+		'text text text';
+
+	@screen lg {
+		display: block;
+	}
+	&:first-child {
+		@apply border-none;
+	}
 
 	&:after,
 	&:before {
@@ -35,7 +49,7 @@
 		@apply lg:px-5 2xl:px-7;
 		&:after,
 		&:before {
-			@apply block;
+			@apply lg:block;
 		}
 		&:after {
 			/* @apply */
@@ -46,19 +60,27 @@
 }
 
 .itemNum {
-	@apply font-extrabold leading-[.75]  text-white text-opacity-20 lg:mb-2.5 lg:text-[80px] 2xl:mb-5 2xl:text-[100px];
+	@apply self-center  text-[60px] font-extrabold leading-[.75]  text-white text-opacity-20 lg:mb-2.5 lg:text-[80px] 2xl:mb-5 2xl:text-[100px];
+	grid-area: num;
 }
 
 .itemTitle {
-	@apply text-white lg:mb-2.5 2xl:mb-5;
+	@apply self-end text-white lg:mb-2.5 2xl:mb-5;
+	grid-area: title;
 }
 
 .itemText {
 	@apply text-[#CFCFCF];
+
+	grid-area: text;
+}
+
+.form {
+	@apply mt-5;
 }
 
 .cloudLeft {
-	@apply pointer-events-none absolute -bottom-[200px] h-[330px]   w-[650px] -scale-x-[1] lg:-left-[420px] 2xl:-left-[260px];
+	@apply pointer-events-none absolute -bottom-[200px] hidden   h-[330px] w-[650px] -scale-x-[1] lg:-left-[420px] lg:block 2xl:-left-[260px];
 	img {
 		@apply h-full w-full max-w-none;
 	}

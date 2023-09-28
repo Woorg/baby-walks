@@ -1,13 +1,13 @@
 .footer {
-	@apply pb-10;
+	@apply lg:pb-10;
 }
 
 .container {
-	@apply flex items-center justify-between py-5 lg:gap-5 2xl:gap-10;
+	@apply flex items-center justify-between gap-5 py-5 2xl:gap-10;
 }
 
 .logo {
-	@apply lg:h-[54px] lg:w-[52px] 2xl:h-[72px] 2xl:h-[74px];
+	@apply h-[48px] w-[46px] shrink-0 lg:h-[54px] lg:w-[52px] 2xl:h-[72px] 2xl:h-[74px];
 }
 
 .navigation {

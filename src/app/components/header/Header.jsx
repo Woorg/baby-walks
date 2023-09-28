@@ -1,19 +1,19 @@
 'use client';
 
-import { useEffect, useId, useRef, useState } from 'react';
-import { motion, MotionConfig, useReducedMotion } from 'framer-motion';
-import Button from '../button/Button';
-import Link from 'next/link';
-import Navigation from '../navigation/Navigation';
-import MenuIcon from '../icons/MenuIcon';
-import CloseIcon from '../icons/CloseIcon';
-import Logo from '../logo/Logo';
-import Container from '../container/Container';
-import Styles from './Header.module.css';
-import Image from 'next/image';
 import LogoImg from '@images/general/logo.webp';
-import TelegramIcon from '../icons/TelegramIcon';
+import { motion, MotionConfig, useReducedMotion } from 'framer-motion';
+import Image from 'next/image';
+import Link from 'next/link';
+import { useEffect, useId, useRef, useState } from 'react';
 import { cn } from '../../lib/utils';
+import Button from '../button/Button';
+import Container from '../container/Container';
+import CloseIcon from '../icons/CloseIcon';
+import MenuIcon from '../icons/MenuIcon';
+import TelegramIcon from '../icons/TelegramIcon';
+import Logo from '../logo/Logo';
+import Navigation from '../navigation/Navigation';
+import Styles from './Header.module.css';
 
 const Header = () => {
 	const panelId = useId();
@@ -67,17 +67,36 @@ const Header = () => {
 						placeholder="blur"
 					/>
 				</Logo>
-				<div className={cn(Styles.wrapper, '')}>
-					<Navigation className={cn(Styles.navigation, '')} />
 
-					<div className={cn(Styles.control, '')}>
-						<Button href={data.telegram.link} className={cn(Styles.contact, '')}>
+				<div
+					className={cn(Styles.wrapper, '', {
+						'bg-[rgba(6, 23, 85, 0.10)] flex-col rounded-b-[20px]': expanded,
+					})}
+				>
+					<Navigation
+						className={cn(Styles.navigation, 'hidden lg:flex', {
+							flex: expanded,
+						})}
+					/>
+					<div
+						className={cn(Styles.control, 'flex', {
+							'flex ': expanded,
+						})}
+					>
+						<Button
+							href={data.telegram.link}
+							className={cn(Styles.contact, 'hidden lg:inline-flex', {
+								'inline-flex': expanded,
+							})}
+						>
 							<TelegramIcon className="h-[40px] w-[40px] lg:h-[50px] lg:w-[50px] xl:h-[52px] xl:w-[52px]" />
 						</Button>
 
 						<Button
 							href={data.contact.link}
-							className={cn(Styles.contact, Styles.general, 'btn btn_big')}
+							className={cn(Styles.contact, Styles.general, 'btn btn_big hidden lg:inline-flex', {
+								'btn_full -order-1 inline-flex ': expanded,
+							})}
 						>
 							{data.contact.text}
 						</Button>
@@ -92,9 +111,9 @@ const Header = () => {
 							aria-label="Toggle navigation"
 						>
 							{expanded ? (
-								<CloseIcon className={cn('h-9 w-9')} />
+								<CloseIcon className={cn('h-[32px] w-[32px]')} />
 							) : (
-								<MenuIcon className={cn('h-9 w-9')} />
+								<MenuIcon className={cn('w-[32px h-[32px]')} />
 							)}
 						</button>
 					</div>

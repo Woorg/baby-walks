@@ -1,10 +1,10 @@
+import Cloud from '@images/general/cloud.webp';
+import ProgramImg from '@images/general/program/programImg.webp';
 import Image from 'next/image';
 import { cn } from '../../lib/utils';
 import Container from '../container/Container';
-import Styles from './Program.module.css';
-import ProgramImg from '@images/general/program/programImg.webp';
-import Cloud from '@images/general/cloud.webp';
 import { SpinIcon } from '../icons/SpinIcon';
+import Styles from './Program.module.css';
 
 const Program = () => {
 	const data = {
@@ -58,7 +58,7 @@ const Program = () => {
 					</ul>
 
 					<div className={cn(Styles.images)}>
-						<SpinIcon invert={false} className={cn(Styles.spin)} />
+						<SpinIcon invert={false} className={cn(Styles.spin, 'spin-logo_micro')} />
 
 						<figure className={cn(Styles.image)}>
 							<Image

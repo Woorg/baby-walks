@@ -1,8 +1,10 @@
 .hero {
-	/* @apply relative; */
 }
 .container {
 	@apply relative pb-10 pt-32 lg:pb-10 lg:pt-32 xl:pt-14 2xl:pb-32;
+	&:after {
+		@apply absolute -left-[297px] top-0 -z-10 h-[511px] w-[511px] rounded-full bg-circle content-[""] 2xl:hidden;
+	}
 }
 
 .intro {
@@ -18,7 +20,7 @@
 }
 
 .title {
-	@apply mb-7;
+	@apply mb-5 lg:mb-[30px];
 }
 
 .text {
@@ -26,9 +28,9 @@
 }
 
 .clouds {
-	@apply absolute right-0 top-[1143px] h-[360px] items-center  overflow-hidden lg:-left-[200px] 2xl:left-0 2xl:top-[497px];
+	@apply absolute left-0 right-0 top-[692px] h-[330px]  w-full items-center overflow-hidden lg:-left-[200px]  lg:top-[1143px] lg:h-[360px] 2xl:left-0 2xl:top-[497px];
 	img {
-		@apply absolute -left-[459px] top-0 h-[448px] w-[5286px] max-w-none;
+		@apply absolute -left-[459px] top-0 h-[330px] w-[5286px] max-w-none lg:h-[360px] 2xl:h-[448px];
 	}
 }
 
@@ -36,7 +38,7 @@
 }
 
 .basicHeading {
-	@apply mb-8 flex flex-wrap gap-x-4 lg:flex-nowrap;
+	@apply mb-0 flex flex-wrap justify-end lg:mb-8 lg:flex-nowrap lg:gap-x-4;
 }
 
 .basicTitle {
@@ -48,29 +50,53 @@
 }
 
 .basicRow {
-	@apply ml-auto flex w-full max-w-[1120px] items-center gap-5;
+	@apply ml-auto grid w-full max-w-[1120px] lg:items-center;
+
+	grid-template-columns: 0.5fr 1fr 1fr;
+	grid-template-rows: 1fr min-content;
+	gap: 0px 20px;
+	grid-template-areas:
+		'image text text'
+		'button button button';
+
+	@screen lg {
+		grid-template-columns: min-content auto auto;
+		grid-template-rows: 1fr min-content;
+		gap: 0px 20px;
+		grid-template-areas:
+			'image text text'
+			'image button button';
+	}
 }
 
 .basicEntry {
+	@apply hidden lg:block;
 }
 
 .basicImg {
-	@apply flex-shrink-0 lg:w-[179px] 2xl:w-[232px];
+	@apply w-[83px] flex-shrink-0 lg:w-[179px] 2xl:w-[232px];
+	grid-area: image;
 }
 
 .basicText {
-	@apply mb-5 lg:text-base 2xl:text-xl;
+	@apply mb-5 lg:mb-0 lg:text-base 2xl:text-xl;
+	grid-area: text;
+}
+
+.basicButton {
+	@apply w-full justify-between lg:w-auto lg:max-w-[200px] lg:justify-center;
+	grid-area: button;
 }
 
 .cloudTop {
-	@apply pointer-events-none absolute z-10 h-[330px] w-[650px] overflow-hidden  lg:-left-[359px] lg:top-[578px] 2xl:-left-[73px] 2xl:-top-[53px];
+	@apply pointer-events-none absolute z-10 hidden h-[330px] w-[650px]  overflow-hidden lg:-left-[359px] lg:top-[578px] 2xl:-left-[73px] 2xl:-top-[53px] 2xl:block;
 	img {
 		@apply h-full w-full max-w-none;
 	}
 }
 
 .cloudLeft {
-	@apply pointer-events-none absolute lg:-bottom-20 lg:-left-[104px] lg:h-[182px] lg:w-[359px] 2xl:-left-[69px] 2xl:bottom-[20px] 2xl:h-[248px] 2xl:w-[487px];
+	@apply pointer-events-none absolute -left-[50px] bottom-[86px] h-[87px] w-[172px] lg:-bottom-20  lg:-left-[104px] lg:h-[182px] lg:w-[359px] 2xl:-left-[69px] 2xl:bottom-[20px] 2xl:h-[248px] 2xl:w-[487px];
 	img {
 		@apply h-full w-full max-w-none;
 	}

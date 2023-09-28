@@ -1,22 +1,23 @@
 .form {
-	@apply bg-white bg-opacity-10 lg:p-5   2xl:p-10;
+	@apply bg-white bg-opacity-10 p-2.5 lg:p-5   2xl:p-10;
 }
 .title {
-	@apply text-white lg:mb-5 2xl:mb-10;
+	@apply mb-5 text-white 2xl:mb-10;
 }
 .formObject {
 	@apply block;
 }
 .row {
-	@apply flex items-center lg:gap-2.5 2xl:gap-5;
+	@apply grid  items-center  gap-2.5 2xl:gap-5;
 }
 
 .field {
+	@apply lg:mb-0 lg:mb-2.5;
 }
 
 .label {
-	@apply flex flex-col justify-start text-xs
-	text-white lg:mb-2.5 lg:text-sm 2xl:mb-5 2xl:text-base;
+	@apply mb-2.5 flex flex-col justify-start
+	text-xs text-white lg:text-sm 2xl:mb-5 2xl:text-base;
 }
 
 .inputText {
@@ -26,8 +27,9 @@
 }
 
 .submit {
+	@apply justify-center;
 }
 
 .note {
-	@apply mt-2.5 text-xs tracking-tight text-white;
+	@apply mb-2.5 mt-2.5 text-[10px] tracking-tight text-white lg:mb-0 lg:text-xs;
 }

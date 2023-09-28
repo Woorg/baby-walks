@@ -3,11 +3,11 @@
 }
 
 .container {
-	@apply relative lg:py-10 2xl:py-20;
+	@apply relative pb-14 pt-10 lg:py-10 2xl:py-20;
 }
 
 .row {
-	@apply flex items-center lg:gap-4 2xl:gap-[136px];
+	@apply flex flex-col items-center lg:flex-row lg:gap-4 2xl:gap-[136px];
 }
 
 .entry {
@@ -15,26 +15,30 @@
 }
 
 .image {
-	@apply relative lg:h-[586px] lg:w-[482px]  2xl:h-[612px] 2xl:w-[591px];
+	@apply relative mb-5 w-[366px] pt-14 lg:mb-0 lg:h-[586px] lg:w-[482px] lg:pt-0  2xl:h-[612px] 2xl:w-[591px];
 	img {
 		/* @apply h-full w-full max-w-none; */
 	}
 }
 
 .spin {
-	@apply absolute right-1 lg:top-0 2xl:-top-[58px];
+	@apply absolute right-0 top-0 lg:right-1 lg:top-0 2xl:-top-[58px];
 }
 
 .title {
-	@apply lg:mb-2.5 2xl:mb-5;
+	@apply mb-2.5 2xl:mb-5;
 }
 
 .text {
-	@apply text-xs lg:mb-5 lg:text-sm 2xl:mb-10 2xl:text-xl;
+	@apply mb-5 text-xs lg:text-sm 2xl:mb-10 2xl:text-xl;
 }
 
 .widget {
 	@apply relative flex min-h-[437px] items-center justify-center bg-zinc-300;
+}
+
+.widgetText {
+	@apply text-xl lg:text-lg;
 }
 
 .widgetScript {

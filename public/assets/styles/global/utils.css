@@ -18,7 +18,7 @@
 	}
 
 	.btn_icon {
-		@apply gap-1.5;
+		@apply ml-auto gap-1.5;
 	}
 
 	.btnArrow {
@@ -26,7 +26,7 @@
 	}
 
 	.btn_full {
-		@apply w-full;
+		@apply w-full justify-between;
 	}
 
 	.title {
@@ -38,14 +38,14 @@
 	}
 
 	.title_h3 {
-		@apply font-manrope font-bold normal-case leading-normal lg:text-xl 2xl:text-2xl;
+		@apply font-manrope text-base font-bold normal-case leading-normal lg:text-xl 2xl:text-2xl;
 	}
 
 	.text {
 		@apply text-xs font-normal lg:text-sm 2xl:text-base;
 	}
 	.text_big {
-		@apply text-xs font-light lg:text-xl;
+		@apply text-base font-light lg:text-xl;
 	}
 
 	.spin-logo {
@@ -69,13 +69,23 @@
 		}
 	}
 
+	.spin-logo_micro {
+		@apply h-[105px] w-[105px] lg:h-[168px] lg:w-[168px] 2xl:h-[211px] 2xl:w-[211px];
+		.spin-logo__letters {
+			@apply h-[91px] w-[91px] lg:h-[146px] lg:w-[146px]  2xl:h-[193px] 2xl:w-[193px];
+		}
+		.spin-logo__image {
+			@apply absolute left-1/2 top-1/2 h-[68px] w-[62px] -translate-x-1/2 -translate-y-1/2  lg:h-[108px] lg:w-[100px]  2xl:h-[126px] 2xl:w-[126px];
+		}
+	}
+
 	.spin-logo_mid {
 		@apply h-[168px] w-[168px] 2xl:h-[211px] 2xl:w-[211px];
 		.spin-logo__letters {
-			@apply h-[113px] w-[113px] lg:h-[146px] lg:w-[146px]  2xl:h-[193px] 2xl:w-[193px];
+			@apply h-[146px] w-[146px] lg:h-[146px] lg:w-[146px]  2xl:h-[193px] 2xl:w-[193px];
 		}
 		.spin-logo__image {
-			@apply absolute left-1/2 top-1/2 h-[84px] w-[78px] -translate-x-1/2 -translate-y-1/2  lg:h-[108px] lg:w-[100px]  2xl:h-[126px] 2xl:w-[126px];
+			@apply absolute left-1/2 top-1/2 h-[108px] w-[100px] -translate-x-1/2 -translate-y-1/2  lg:h-[108px] lg:w-[100px]  2xl:h-[126px] 2xl:w-[126px];
 		}
 	}
 }

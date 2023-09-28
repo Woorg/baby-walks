@@ -23,8 +23,8 @@ export const FormSignUp = ({ className }) => {
 			<div className={cn(Styles.form, className)}>
 				<h2 className={cn(Styles.title, 'title title_h2')}>{data.title}</h2>
 				<form className={cn(Styles.formObject)} onSubmit={handleSubmit(onSubmit)}>
-					<div className={cn(Styles.row)}>
-						<div className={cn(Styles.field, 'lg:max-w-300px w-full 2xl:max-w-[453px]')}>
+					<div className={cn(Styles.row, 'grid-cols-3')}>
+						<div className={cn(Styles.field, 'col-span-3 w-full lg:col-span-1 ')}>
 							<label className={cn(Styles.label)} htmlFor="nameSignUp">
 								Ваше имя
 							</label>
@@ -38,7 +38,7 @@ export const FormSignUp = ({ className }) => {
 							/>
 						</div>
 
-						<div className={cn(Styles.field, 'lg:max-w-300px w-full 2xl:max-w-[453px]')}>
+						<div className={cn(Styles.field, 'col-span-3 w-full lg:col-span-1 ')}>
 							<label className={cn(Styles.label)} htmlFor="phoneSignUp">
 								Номер телефона *
 							</label>
@@ -52,7 +52,7 @@ export const FormSignUp = ({ className }) => {
 							/>
 						</div>
 
-						<div className={cn(Styles.submitW, 'w-full lg:max-w-[322px] ')}>
+						<div className={cn(Styles.submitW, 'col-span-3 w-full lg:col-span-1')}>
 							<button type="submit" className={cn(Styles.submit, 'btn btn_big btn_full')}>
 								Отправить
 							</button>
@@ -84,8 +84,8 @@ export const FormAffiliate = ({ className }) => {
 			<div className={cn(Styles.form, className)}>
 				<h2 className={cn(Styles.title, 'title title_h2')}>{data.title}</h2>
 				<form className={cn(Styles.formObject)} onSubmit={handleSubmit(onSubmit)}>
-					<div className={cn(Styles.row)}>
-						<div className={cn(Styles.field, 'w-full lg:max-w-[229px] 2xl:max-w-[302px]')}>
+					<div className={cn(Styles.row, 'grid-cols-4')}>
+						<div className={cn(Styles.field, 'col-span-2 w-full lg:col-span-1')}>
 							<label className={cn(Styles.label)} htmlFor="nameAffiliate">
 								Ваше имя
 							</label>
@@ -99,7 +99,7 @@ export const FormAffiliate = ({ className }) => {
 							/>
 						</div>
 
-						<div className={cn(Styles.field, 'w-full lg:max-w-[229px] 2xl:max-w-[302px]')}>
+						<div className={cn(Styles.field, 'col-span-2 w-full lg:col-span-1')}>
 							<label className={cn(Styles.label)} htmlFor="phoneAffiliate">
 								Номер телефона *
 							</label>
@@ -113,7 +113,7 @@ export const FormAffiliate = ({ className }) => {
 							/>
 						</div>
 
-						<div className={cn(Styles.field, 'w-full lg:max-w-[229px] 2xl:max-w-[302px]')}>
+						<div className={cn(Styles.field, 'col-span-4 w-full lg:col-span-1')}>
 							<label className={cn(Styles.label)} htmlFor="messageAffiliate">
 								Комментарий
 							</label>
@@ -127,7 +127,7 @@ export const FormAffiliate = ({ className }) => {
 							/>
 						</div>
 
-						<div className={cn(Styles.submitW, '2xl:max-w-[229px lg:max-w-[229px]')}>
+						<div className={cn(Styles.submitW, 'col-span-4 w-full lg:col-span-1')}>
 							<button
 								type="submit"
 								className={cn(

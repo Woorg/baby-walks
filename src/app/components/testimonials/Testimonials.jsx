@@ -1,10 +1,5 @@
 'use client';
-import Image from 'next/image';
-import { cn } from '../../lib/utils';
-import Container from '../container/Container';
-import Styles from './Testimonials.module.css';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation } from 'swiper/modules';
+
 import Img1 from '@images/content/testimonials/testimImg-1.webp';
 import Img2 from '@images/content/testimonials/testimImg-2.webp';
 import Img3 from '@images/content/testimonials/testimImg-3.webp';
@@ -15,9 +10,15 @@ import Img7 from '@images/content/testimonials/testimImg-7.webp';
 import Img8 from '@images/content/testimonials/testimImg-8.webp';
 import Img9 from '@images/content/testimonials/testimImg-9.webp';
 import Img10 from '@images/content/testimonials/testimImg-10.webp';
+import Image from 'next/image';
+import { Navigation } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { cn } from '../../lib/utils';
+import Container from '../container/Container';
+import Styles from './Testimonials.module.css';
 import 'swiper/css';
-import SliderButton from '../icons/SliderButton';
 import CloudImg from '@images/general/cloud.webp';
+import SliderButton from '../icons/SliderButton';
 
 const Testimonials = () => {
 	const data = {
@@ -136,7 +137,7 @@ const Testimonials = () => {
 							<SwiperSlide key={`__${key}__`} className={cn(Styles.sliderSlide, 'px-2 lg:px-2')}>
 								<figure className={cn(Styles.sliderImage, '')}>
 									<Image
-										className={cn(Styles.image, 'hidden lg:block')}
+										className={cn(Styles.image, 'block')}
 										src={slide.image.src}
 										alt={slide.image.alt}
 										width={slide.image.src.width}

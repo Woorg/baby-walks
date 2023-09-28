@@ -3,7 +3,7 @@
 }
 
 .container {
-	@apply text-white lg:pb-5 lg:pt-10 2xl:py-10;
+	@apply pb-5 pt-5 text-white lg:pt-10 2xl:py-10;
 }
 
 .title {
@@ -11,11 +11,11 @@
 }
 
 .row {
-	@apply flex items-center gap-4;
+	@apply items-center gap-2.5 lg:flex lg:gap-4;
 }
 
 .spin {
-	/* @apply ; */
+	@apply mb-5 lg:mb-0;
 }
 
 .list {
@@ -23,7 +23,7 @@
 }
 
 .item {
-	@apply mb-2.5 bg-[#5B699A] p-5  2xl:mb-0;
+	@apply mb-2.5 bg-[#5B699A] px-2.5 py-5 lg:p-5  2xl:mb-0;
 
 	&:nth-child(1),
 	&:nth-child(2) {
@@ -39,7 +39,7 @@
 }
 
 .itemTitle {
-	@apply text-white lg:mb-3 2xl:mb-5;
+	@apply mb-3 text-white 2xl:mb-5;
 }
 
 .itemText {
