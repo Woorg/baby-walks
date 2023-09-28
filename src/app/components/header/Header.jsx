@@ -22,17 +22,30 @@ const Header = () => {
 	const navRef = useRef();
 	const shouldReduceMotion = useReducedMotion();
 
+	const updateExpandedState = () => {
+		if (window.innerWidth > 768) {
+			setExpanded(false);
+		}
+	};
+
 	useEffect(() => {
+		updateExpandedState();
+
 		function onClick(event) {
 			if (event.target.closest('a')?.href === window.location.href) {
 				setExpanded(false);
-				setIsInverted(false);
+			} else if (!navRef.current.contains(event.target)) {
+				// Close the menu if the click is outside the menu
+				setExpanded(false);
 			}
 		}
 		window.addEventListener('click', onClick);
+		const mediaQuery = window.matchMedia('(min-width: 769px)');
+		mediaQuery.addListener(updateExpandedState);
 
 		return () => {
 			window.removeEventListener('click', onClick);
+			mediaQuery.removeListener(updateExpandedState);
 		};
 	}, []);
 
@@ -55,71 +68,84 @@ const Header = () => {
 	};
 
 	return (
-		<header className={cn(Styles.header, 'fixed left-0 top-0 z-50 w-full transition-colors')}>
-			<Container className={cn(Styles.container, '')}>
-				<Logo className={cn(Styles.logo, '')}>
-					<Image
-						src={data.logo.src}
-						alt={data.logo.alt}
-						width={data.logo.width}
-						height={data.logo.height}
-						blurDataURL={data.logo.blurDataURL}
-						placeholder="blur"
-					/>
-				</Logo>
+		<MotionConfig transition={shouldReduceMotion ? { duration: 0 } : null}>
+			<header className={cn(Styles.header, 'fixed left-0 top-0 z-50 w-full transition-colors')}>
+				<Container className={cn(Styles.container, '')}>
+					<Logo className={cn(Styles.logo, '')}>
+						<Image
+							src={data.logo.src}
+							alt={data.logo.alt}
+							width={data.logo.width}
+							height={data.logo.height}
+							// blurDataURL={data.logo.blurDataURL}
+							// placeholder="blur"
+						/>
+					</Logo>
 
-				<div
-					className={cn(Styles.wrapper, '', {
-						'bg-[rgba(6, 23, 85, 0.10)] flex-col rounded-b-[20px]': expanded,
-					})}
-				>
-					<Navigation
-						className={cn(Styles.navigation, 'hidden lg:flex', {
-							flex: expanded,
-						})}
-					/>
-					<div
-						className={cn(Styles.control, 'flex', {
-							'flex ': expanded,
+					<motion.div
+						// layout
+						// style={{ height: expanded ? 'auto' : '0' }}
+						ref={navRef}
+						className={cn(Styles.wrapper, '', {
+							'fixed left-0 right-0 top-0 w-full flex-col justify-center rounded-b-[20px] border border-white bg-[#5B5C62] p-5 transition-colors':
+								expanded,
 						})}
 					>
-						<Button
-							href={data.telegram.link}
-							className={cn(Styles.contact, 'hidden lg:inline-flex', {
-								'inline-flex': expanded,
-							})}
-						>
-							<TelegramIcon className="h-[40px] w-[40px] lg:h-[50px] lg:w-[50px] xl:h-[52px] xl:w-[52px]" />
-						</Button>
-
-						<Button
-							href={data.contact.link}
-							className={cn(Styles.contact, Styles.general, 'btn btn_big hidden lg:inline-flex', {
-								'btn_full -order-1 inline-flex ': expanded,
-							})}
-						>
-							{data.contact.text}
-						</Button>
-
-						<button
-							ref={toggleRef}
-							type="button"
-							onClick={toggleMenu}
-							aria-expanded={expanded.toString()}
-							aria-controls={panelId}
-							className={cn('rounded-full p-2.5 transition lg:hidden')}
-							aria-label="Toggle navigation"
-						>
-							{expanded ? (
-								<CloseIcon className={cn('h-[32px] w-[32px]')} />
-							) : (
-								<MenuIcon className={cn('w-[32px h-[32px]')} />
+						<Navigation
+							expanded={expanded}
+							className={cn(
+								Styles.navigation,
+								'hidden max-w-[421px] text-white lg:flex lg:max-w-[578px]',
+								{
+									'mt-10 flex max-w-full': expanded,
+								},
 							)}
-						</button>
-					</div>
-				</div>
-			</Container>
-		</header>
+						/>
+						<div
+							className={cn(Styles.control, 'flex max-w-[607px]', {
+								'mt-10 max-w-full': expanded,
+							})}
+						>
+							<Button
+								href={data.telegram.link}
+								className={cn(Styles.contact, 'hidden lg:inline-flex', {
+									'inline-flex': expanded,
+								})}
+							>
+								<TelegramIcon className="h-[40px] w-[40px] lg:h-[50px] lg:w-[50px] xl:h-[52px] xl:w-[52px]" />
+							</Button>
+
+							<Button
+								href={data.contact.link}
+								className={cn(Styles.contact, Styles.general, 'btn btn_big hidden lg:inline-flex', {
+									'btn_full -order-1 inline-flex h-[40px] justify-center': expanded,
+								})}
+							>
+								{data.contact.text}
+							</Button>
+
+							<button
+								ref={toggleRef}
+								type="button"
+								onClick={toggleMenu}
+								aria-expanded={expanded.toString()}
+								aria-controls={panelId}
+								className={cn(Styles.trigger, 'rounded-full p-2.5 lg:hidden', {
+									'absolute right-2.5 top-2.5': expanded,
+								})}
+								aria-label="Toggle navigation"
+							>
+								{expanded ? (
+									<CloseIcon className={cn('pointer-events-none h-[32px] w-[32px]')} />
+								) : (
+									<MenuIcon className={cn('pointer-events-none h-[14px] w-[35px]')} />
+								)}
+							</button>
+						</div>
+					</motion.div>
+				</Container>
+			</header>
+		</MotionConfig>
 	);
 };
 

@@ -2,7 +2,7 @@
 }
 
 .list {
-	@apply flex flex-wrap lg:flex-row lg:flex-nowrap;
+	@apply flex w-full flex-wrap md:flex-nowrap lg:flex-row;
 }
 
 .item {
@@ -13,7 +13,7 @@
 		}
 	}
 	&:last-child {
-		@apply w-full;
+		@apply w-full lg:w-auto;
 
 		.link {
 			@apply lg:pr-0 xl:pr-5;
@@ -22,5 +22,5 @@
 }
 
 .link {
-	@apply px-2.5 font-manrope text-sm font-bold text-blue-950 xl:px-5 xl:text-base;
+	@apply flex px-2.5 font-manrope text-sm font-bold xl:px-5 xl:text-base;
 }

@@ -2,24 +2,24 @@
 /* @import '../../../../public/assets/styles/mixins.css'; */
 
 .header {
-	@apply rounded-bl-2xl rounded-br-2xl border-b border-white bg-white  bg-opacity-20 backdrop-blur-md;
+	@apply rounded-bl-2xl rounded-br-2xl border-b border-white bg-white bg-opacity-20 backdrop-blur-md;
 }
 
 .container {
-	@apply relative flex items-center items-center justify-start justify-between py-5;
+	@apply flex items-center items-center justify-start justify-between py-2.5 lg:py-5;
 }
 .wrapper {
 	@apply flex w-full items-center justify-between;
 }
 .navigation {
-	@apply w-full max-w-[421px]  xl:max-w-[578px];
+	@apply w-full;
 }
 
 .logo {
 	@apply h-[54px] w-[52px] flex-shrink-0 lg:absolute lg:left-1/2  lg:top-2.5  lg:h-[72px] lg:w-[70px] lg:-translate-x-1/2 xl:h-[74px] xl:w-[72px];
 }
 .control {
-	@apply w-full max-w-[607px] items-center justify-end  gap-2.5 lg:flex  xl:max-w-[578px];
+	@apply ml-auto w-full  items-center justify-end gap-2.5 lg:flex  xl:max-w-[578px];
 }
 
 .icon {
@@ -27,7 +27,7 @@
 }
 
 .trigger {
-	@apply rounded-full bg-neutral-200 p-2;
+	@apply bg-transparent;
 }
 /* .contact {
 } */

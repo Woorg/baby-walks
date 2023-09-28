@@ -30,8 +30,8 @@ const Footer = () => {
 						alt={data.logo.alt}
 						width={data.logo.width}
 						height={data.logo.height}
-						blurDataURL={data.logo.blurDataURL}
-						placeholder="blur"
+						// blurDataURL={data.logo.blurDataURL}
+						// placeholder="blur"
 					/>
 				</Logo>
 				<Navigation className={cn(Styles.navigation, '')} />
