@@ -1,9 +1,8 @@
 // import "./globals.css";
 import '../../public/assets/styles/style.css';
-
 import { Cormorant_Infant, Manrope, Noto_Serif } from 'next/font/google';
-import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
+import Header from './components/header/Header';
 import { cn } from './lib/utils';
 
 const manrope = Manrope({

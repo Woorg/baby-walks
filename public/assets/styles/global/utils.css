@@ -34,7 +34,7 @@
 	}
 
 	.title_h2 {
-		@apply font-noto-serif text-[22px]  font-normal leading-normal lg:text-4xl 2xl:text-[44px];
+		@apply font-noto-serif text-[22px]  font-normal leading-normal lg:text-4xl lg:leading-snug 2xl:text-[44px];
 	}
 
 	.title_h3 {

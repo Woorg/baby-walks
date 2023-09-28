@@ -286,8 +286,8 @@ export const SpinIcon = ({ invert = false, className }) => {
 					alt={data.imageWhite.alt}
 					width={data.imageWhite.src.width}
 					height={data.imageWhite.src.height}
-					blurDataURL={data.imageWhite.src.blurDataURL}
-					placeholder="blur"
+					// blurDataURL={data.imageWhite.src.blurDataURL}
+					// placeholder="blur"
 				/>
 			) : (
 				<Image
@@ -296,8 +296,8 @@ export const SpinIcon = ({ invert = false, className }) => {
 					alt={data.image.alt}
 					width={data.image.src.width}
 					height={data.image.src.height}
-					blurDataURL={data.image.src.blurDataURL}
-					placeholder="blur"
+					// blurDataURL={data.image.src.blurDataURL}
+					// placeholder="blur"
 				/>
 			)}
 		</div>
