@@ -26,7 +26,7 @@
 
 .sliderPrev,
 .sliderNext {
-	@apply h-[36px] w-[36px] text-[#7592FF] transition-opacity  lg:w-[41px] lg:w-[41px]   2xl:w-[50px] 2xl:w-[50px];
+	@apply h-[36px] w-[36px] text-[#7592FF] transition-opacity  lg:h-[41px] lg:w-[41px]   2xl:h-[50px] 2xl:w-[50px];
 	&[disabled] {
 		@apply opacity-30;
 	}

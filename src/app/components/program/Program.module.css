@@ -1,4 +1,5 @@
 .program {
+	@apply overflow-hidden;
 }
 
 .container {
@@ -41,7 +42,7 @@
 }
 
 .image {
-	@apply h-auto w-[370px] lg:h-[830px] lg:w-[519px] 2xl:h-[860px] 2xl:w-[467px];
+	@apply h-auto w-[370px]  lg:h-[830px] lg:w-[519px] 2xl:h-[860px] 2xl:w-[467px];
 }
 
 .spin {

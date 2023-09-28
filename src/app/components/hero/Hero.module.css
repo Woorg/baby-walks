@@ -28,9 +28,9 @@
 }
 
 .clouds {
-	@apply absolute left-0 right-0 top-[692px] h-[330px]  w-full items-center overflow-hidden lg:-left-[200px]  lg:top-[1143px] lg:h-[360px] 2xl:left-0 2xl:top-[497px];
+	@apply absolute left-0 right-0 top-[692px] h-[330px]  w-full items-center overflow-hidden  lg:top-[1143px] lg:h-[360px]  2xl:top-[497px];
 	img {
-		@apply absolute -left-[459px] top-0 h-[330px] w-[5286px] max-w-none lg:h-[360px] 2xl:h-[448px];
+		@apply absolute left-0 top-0 h-[330px] w-[5286px] max-w-none lg:h-[360px] 2xl:h-[448px];
 	}
 }
 
@@ -86,6 +86,9 @@
 .basicButton {
 	@apply w-full justify-between lg:w-auto lg:max-w-[200px] lg:justify-center;
 	grid-area: button;
+	@screen lg {
+		@apply col-span-1;
+	}
 }
 
 .cloudTop {

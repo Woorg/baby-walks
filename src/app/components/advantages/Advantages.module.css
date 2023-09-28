@@ -15,7 +15,7 @@
 }
 
 .item {
-	@apply relative grid items-baseline border-t border-white border-opacity-20 py-5 lg:block lg:items-start lg:border-none lg:py-5;
+	@apply relative grid items-baseline border-t border-white border-opacity-20 py-5 lg:block lg:items-start lg:border-none lg:px-5 lg:py-5 2xl:px-7;
 	display: grid;
 	grid-template-columns: 0.5fr 1fr 1fr;
 	grid-template-rows: min-content min-content;
