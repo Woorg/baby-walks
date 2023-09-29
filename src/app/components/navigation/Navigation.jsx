@@ -1,23 +1,24 @@
-import Link from 'next/link';
+// import Link from 'next/link';
+import { Link } from 'react-scroll';
 import { cn } from '../../lib/utils';
 import Styles from './Navigation.module.css';
 
 const Navigation = ({ expanded, closeMenu, className, children }) => {
 	const data = [
 		{
-			href: '/#about',
+			href: 'about',
 			name: 'О курсе',
 		},
 		{
-			href: '/#program',
+			href: 'program',
 			name: 'Программа',
 		},
 		{
-			href: '/#testimonials',
+			href: 'testimonials',
 			name: 'Отзывы',
 		},
 		{
-			href: '/#affiliate',
+			href: 'affiliate',
 			name: 'Партнёрская программа',
 		},
 	];
@@ -42,8 +43,13 @@ const Navigation = ({ expanded, closeMenu, className, children }) => {
 						})}
 					>
 						<Link
-							href={link.href}
+							to={link.href}
 							onClick={closeMenu}
+							activeClass="active"
+							smooth={true}
+							spy={true}
+							hashSpy={true}
+							offset={-72}
 							className={cn(Styles.link, 'text-blue-950', {
 								'w-full justify-center text-[#F3EFEB]': expanded,
 							})}
