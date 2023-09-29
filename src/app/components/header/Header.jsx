@@ -90,8 +90,8 @@ const Header = () => {
 						// layout
 						// style={{ height: expanded ? 'auto' : '0' }}
 						ref={navRef}
-						className={cn(Styles.wrapper, '', {
-							'fixed left-0 right-0 top-0 w-full flex-col justify-center rounded-b-[20px] border border-white bg-[#5B5C62] p-5 transition-colors':
+						className={cn(Styles.wrapper, 'after:hidden', {
+							'fixed left-0 right-0 top-0 w-full flex-col justify-center overflow-hidden rounded-b-[20px] p-5 transition-colors  after:z-10 after:block after:border after:border-white after:bg-[rgba(6,23,85,.70)] after:backdrop-blur-[6px]':
 								expanded,
 						})}
 					>
@@ -100,21 +100,21 @@ const Header = () => {
 							closeMenu={closeMenu}
 							className={cn(
 								Styles.navigation,
-								'hidden max-w-[421px] text-white lg:flex lg:max-w-[578px]',
+								'hidden max-w-[421px] text-white lg:flex lg:max-w-[578px] ',
 								{
-									'mt-10 flex max-w-full': expanded,
+									'mt-10 flex max-w-full ': expanded,
 								},
 							)}
 						/>
 						<div
 							className={cn(Styles.control, 'flex max-w-[607px]', {
-								'mt-10 max-w-full': expanded,
+								'mt-10 max-w-full ': expanded,
 							})}
 						>
 							<Button
 								href={data.telegram.link}
 								className={cn(Styles.contact, 'hidden lg:inline-flex', {
-									'inline-flex': expanded,
+									'inline-flex ': expanded,
 								})}
 							>
 								<TelegramIcon className="h-[40px] w-[40px] lg:h-[50px] lg:w-[50px] xl:h-[52px] xl:w-[52px]" />
@@ -122,9 +122,14 @@ const Header = () => {
 
 							<Button
 								href={data.contact.link}
-								className={cn(Styles.contact, Styles.general, 'btn btn_big hidden lg:inline-flex', {
-									'btn_full -order-1 inline-flex h-[40px] justify-center': expanded,
-								})}
+								className={cn(
+									Styles.contact,
+									Styles.general,
+									'btn btn_big hidden  lg:inline-flex',
+									{
+										'btn_full -order-1 inline-flex h-[40px] justify-center ': expanded,
+									},
+								)}
 							>
 								{data.contact.text}
 							</Button>
@@ -136,7 +141,7 @@ const Header = () => {
 								aria-expanded={expanded.toString()}
 								aria-controls={panelId}
 								className={cn(Styles.trigger, 'rounded-full p-2.5 lg:hidden', {
-									'absolute right-2.5 top-2.5': expanded,
+									'absolute right-2.5 top-2.5 ': expanded,
 								})}
 								aria-label="Toggle navigation"
 							>

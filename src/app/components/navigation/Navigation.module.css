@@ -22,5 +22,5 @@
 }
 
 .link {
-	@apply flex whitespace-nowrap rounded-full px-2.5 py-1.5 font-manrope text-sm font-bold  transition-all hover:bg-white hover:bg-opacity-80  hover:text-[#6C7AAD] 2xl:px-5 2xl:py-2.5 2xl:text-base;
+	@apply flex cursor-pointer whitespace-nowrap rounded-full px-2.5 py-1.5 font-manrope text-sm font-bold  transition-all hover:bg-white hover:bg-opacity-80  hover:text-[#6C7AAD] 2xl:px-5 2xl:py-2.5 2xl:text-base;
 }
