@@ -1,26 +1,17 @@
-import clsx from 'clsx';
 import Link from 'next/link';
-import { useRouter } from 'next/navigation';
-import cn from './Logo.module.css';
+// import { useRouter } from 'next/navigation';
+import { cn } from '../../lib/utils';
+import Styles from './Logo.module.css';
 
-const Logo = ({ invert, href, className, children, ...props }) => {
-	const router = useRouter();
-	const isMainPage = router.pathname === '/';
+const Logo = ({ className, children }) => {
+	// const router = useRouter();
+	// const isMainPage = router.pathname === '/';
 
-	className = clsx(cn.logo, className, invert ? 'text-white' : 'text-neutral-900');
-	if (isMainPage) {
-		return (
-			<Link aria-label="Главная" href="/" className={className} {...props}>
-				{children}
-			</Link>
-		);
-	} else {
-		return (
-			<div className={className} {...props}>
-				{children}
-			</div>
-		);
-	}
+	return (
+		<Link className={cn(className)} href={'/#top'}>
+			{children}
+		</Link>
+	);
 };
 
 export default Logo;

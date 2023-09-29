@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { cn } from '../../lib/utils';
 import Styles from './Navigation.module.css';
 
-const Navigation = ({ expanded, className, children }) => {
+const Navigation = ({ expanded, closeMenu, className, children }) => {
 	const data = [
 		{
 			href: '/#about',
@@ -22,6 +22,11 @@ const Navigation = ({ expanded, className, children }) => {
 		},
 	];
 
+	const closeMenuOnClickNavLink = () => {
+		// Close the menu when clicking on a navigation link
+		expanded(false);
+	};
+
 	return (
 		<nav className={cn(Styles.navigation, '', className)}>
 			<ul
@@ -38,6 +43,7 @@ const Navigation = ({ expanded, className, children }) => {
 					>
 						<Link
 							href={link.href}
+							onClick={closeMenu}
 							className={cn(Styles.link, 'text-blue-950', {
 								'w-full justify-center text-[#F3EFEB]': expanded,
 							})}

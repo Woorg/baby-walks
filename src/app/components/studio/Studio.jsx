@@ -14,7 +14,7 @@ const data = {
 };
 const Studio = () => {
 	return (
-		<section className={cn(Styles.studio)}>
+		<section id="about" className={cn(Styles.studio)}>
 			<Container className={cn(Styles.container)}>
 				<h2 className={cn(Styles.title, 'title title_h2')}>{data.title}</h2>
 				<div className={cn(Styles.row)}>

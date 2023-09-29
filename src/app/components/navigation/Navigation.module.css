@@ -9,18 +9,18 @@
 	@apply mb-2 lg:mb-0;
 	&:first-child {
 		.link {
-			@apply lg:pl-0 xl:pl-5;
+			/* @apply lg:pl-0 xl:pl-5; */
 		}
 	}
 	&:last-child {
 		@apply w-full lg:w-auto;
 
 		.link {
-			@apply lg:pr-0 xl:pr-5;
+			/* @apply lg:pr-0 xl:pr-5; */
 		}
 	}
 }
 
 .link {
-	@apply flex px-2.5 font-manrope text-sm font-bold xl:px-5 xl:text-base;
+	@apply flex whitespace-nowrap rounded-full px-2.5 py-1.5 font-manrope text-sm font-bold  transition-all hover:bg-white hover:bg-opacity-80  hover:text-[#6C7AAD] 2xl:px-5 2xl:py-2.5 2xl:text-base;
 }

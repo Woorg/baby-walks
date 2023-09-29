@@ -40,7 +40,7 @@ const Program = () => {
 		},
 	};
 	return (
-		<section className={cn(Styles.program)}>
+		<section id="program" className={cn(Styles.program)}>
 			<Container className={cn(Styles.container)}>
 				<h2 className={cn(Styles.title, 'title title_h2')}>{data.title}</h2>
 

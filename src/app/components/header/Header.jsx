@@ -53,12 +53,16 @@ const Header = () => {
 		setExpanded(!expanded);
 	};
 
+	const closeMenu = () => {
+		setExpanded(false);
+	};
+
 	const data = {
 		telegram: {
-			link: 'https://web.telegram.org/k/',
+			link: 'https://t.me/BabyWalks',
 		},
 		contact: {
-			link: '#contact',
+			link: '/#join',
 			text: 'Присоединиться',
 		},
 		logo: {
@@ -71,7 +75,7 @@ const Header = () => {
 		<MotionConfig transition={shouldReduceMotion ? { duration: 0 } : null}>
 			<header className={cn(Styles.header, 'fixed left-0 top-0 z-50 w-full transition-colors')}>
 				<Container className={cn(Styles.container, '')}>
-					<Logo className={cn(Styles.logo, '')}>
+					<Logo className={cn(Styles.logo, '')} link="/">
 						<Image
 							src={data.logo.src}
 							alt={data.logo.alt}
@@ -93,6 +97,7 @@ const Header = () => {
 					>
 						<Navigation
 							expanded={expanded}
+							closeMenu={closeMenu}
 							className={cn(
 								Styles.navigation,
 								'hidden max-w-[421px] text-white lg:flex lg:max-w-[578px]',

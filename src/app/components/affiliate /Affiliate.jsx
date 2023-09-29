@@ -24,7 +24,7 @@ const Affiliate = () => {
 	};
 
 	return (
-		<section className={cn(Styles.affiliate)}>
+		<section id="affiliate" className={cn(Styles.affiliate)}>
 			<Container className={cn(Styles.container)}>
 				<h2 className={cn(Styles.title, 'title title_h2')}>{data.title}</h2>
 				<div className={cn(Styles.row)}>

@@ -1,7 +1,7 @@
 .hero {
 }
 .container {
-	@apply relative pb-10 pt-32 lg:pb-10 lg:pt-32 xl:pt-14 2xl:pb-32;
+	@apply relative pb-10 pt-32 lg:pb-10 lg:pt-32  2xl:pb-32;
 	&:after {
 		@apply absolute -left-[297px] top-0 -z-10 h-[511px] w-[511px] rounded-full bg-circle content-[""] 2xl:hidden;
 	}
@@ -28,7 +28,7 @@
 }
 
 .clouds {
-	@apply absolute left-0 right-0 top-[692px] h-[330px]  w-full items-center overflow-hidden  lg:top-[1143px] lg:h-[360px]  2xl:top-[497px];
+	@apply absolute left-0 right-0 top-[692px] h-[330px]  w-full items-center overflow-hidden  lg:top-[1143px] lg:h-[360px]  2xl:top-[587px];
 	img {
 		@apply absolute left-0 top-0 h-[330px] w-[5286px] max-w-none lg:h-[360px] 2xl:h-[448px];
 	}

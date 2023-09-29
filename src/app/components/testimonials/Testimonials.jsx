@@ -92,7 +92,7 @@ const Testimonials = () => {
 	};
 
 	return (
-		<section className={cn(Styles.testimonials)}>
+		<section id="testimonials" className={cn(Styles.testimonials)}>
 			<Container className={cn(Styles.container)}>
 				<h2 className={cn(Styles.title, 'title title_h2 ')}>{data.title}</h2>
 
