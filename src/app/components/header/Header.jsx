@@ -73,9 +73,18 @@ const Header = () => {
 
 	return (
 		<MotionConfig transition={shouldReduceMotion ? { duration: 0 } : null}>
-			<header className={cn(Styles.header, 'fixed left-0 top-0 z-50 w-full transition-colors')}>
-				<Container className={cn(Styles.container, '')}>
-					<Logo className={cn(Styles.logo, '')} link="/">
+			<header className={cn(Styles.header, 'fixed left-0 top-0 z-50 w-full transition-colors', {})}>
+				<Container
+					className={cn(Styles.container, 'py-2.5 lg:py-5', {
+						'py-0 lg:py-0': expanded,
+					})}
+				>
+					<Logo
+						className={cn(Styles.logo, '', {
+							hidden: expanded,
+						})}
+						link="/"
+					>
 						<Image
 							src={data.logo.src}
 							alt={data.logo.alt}
@@ -91,7 +100,7 @@ const Header = () => {
 						// style={{ height: expanded ? 'auto' : '0' }}
 						ref={navRef}
 						className={cn(Styles.wrapper, 'after:hidden', {
-							'fixed left-0 right-0 top-0 w-full flex-col justify-center overflow-hidden rounded-b-[20px] border border-white  p-5 transition-colors after:z-10 after:block after:bg-[rgba(6,23,85,.10)] after:backdrop-blur-[6px]':
+							'fixed left-0 right-0 top-0 w-full flex-col justify-center overflow-hidden rounded-b-[20px] border border-white  p-5 transition-colors after:z-10 after:block after:bg-[rgba(6,23,85,.20)] after:backdrop-blur-[20px]':
 								expanded,
 						})}
 					>
