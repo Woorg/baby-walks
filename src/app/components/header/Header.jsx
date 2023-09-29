@@ -123,7 +123,7 @@ const Header = () => {
 							<Button
 								href={data.telegram.link}
 								className={cn(Styles.contact, 'hidden lg:inline-flex', {
-									'inline-flex ': expanded,
+									'inline-flex hidden': expanded,
 								})}
 							>
 								<TelegramIcon className="h-[40px] w-[40px] lg:h-[50px] lg:w-[50px] xl:h-[52px] xl:w-[52px]" />
