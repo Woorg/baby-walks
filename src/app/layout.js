@@ -35,6 +35,7 @@ export default function Layout({ children }) {
 	return (
 		<html lang="ru">
 			<body
+				id="top"
 				className={cn(
 					manrope.variable,
 					cormorantInfant.variable,

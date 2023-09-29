@@ -142,8 +142,8 @@ const Testimonials = () => {
 										alt={slide.image.alt}
 										width={slide.image.src.width}
 										height={slide.image.src.height}
-										blurDataURL={slide.image.src.blurDataURL}
-										placeholder="blur"
+										// blurDataURL={slide.image.src.blurDataURL}
+										// placeholder="blur"
 									/>
 								</figure>
 							</SwiperSlide>

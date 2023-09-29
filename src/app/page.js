@@ -10,7 +10,7 @@ import Whom from './components/whom /Whom';
 
 export default function Home() {
 	return (
-		<MainLayout id="top">
+		<MainLayout>
 			<Hero />
 			<Advantages />
 			<Program />
