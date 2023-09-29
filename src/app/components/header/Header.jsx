@@ -91,7 +91,7 @@ const Header = () => {
 						// style={{ height: expanded ? 'auto' : '0' }}
 						ref={navRef}
 						className={cn(Styles.wrapper, 'after:hidden', {
-							'fixed left-0 right-0 top-0 w-full flex-col justify-center overflow-hidden rounded-b-[20px] border border-white  p-5 transition-colors after:z-10 after:block after:bg-[#49588F] after:bg-opacity-90 after:backdrop-blur-[6px]':
+							'fixed left-0 right-0 top-0 w-full flex-col justify-center overflow-hidden rounded-b-[20px] border border-white  p-5 transition-colors after:z-10 after:block after:bg-[rgba(6,23,85,.70)] after:backdrop-blur-[6px]':
 								expanded,
 						})}
 					>
