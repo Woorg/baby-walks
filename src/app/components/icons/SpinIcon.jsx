@@ -16,11 +16,14 @@ export const SpinIcon = ({ invert = false, className }) => {
 	};
 
 	return (
-		<div className={cn(className, 'spin-logo ')}>
+		<div className={cn(className, 'spin-logo', 'relative')}>
 			<svg
-				className={cn('spin-logo__letters', {
-					'text-white': invert,
-				})}
+				className={cn(
+					'spin-logo__letters animate-rotate absolute left-0 top-0 h-full w-full [animation-duration:135s]',
+					{
+						'text-white': invert,
+					},
+				)}
 				viewBox="0 0 194 194"
 				fill="none"
 				xmlns="http://www.w3.org/2000/svg"

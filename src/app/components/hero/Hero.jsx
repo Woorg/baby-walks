@@ -134,7 +134,7 @@ const Hero = () => {
 				</figure>
 			</Container>
 
-			<figure className={cn(Styles.clouds)}>
+			<figure className={cn(Styles.clouds, 'animate-marquee [animation-duration:64s]')}>
 				<Image
 					src={data.clouds.src}
 					alt={data.clouds.alt}

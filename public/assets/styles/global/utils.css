@@ -55,7 +55,7 @@
 		@apply absolute left-1/2 top-1/2 h-[193px] w-[193px] -translate-x-1/2 -translate-y-1/2;
 	}
 	.spin-logo__image {
-		@apply absolute left-1/2 top-1/2 h-[126px] w-[126px]  -translate-x-1/2 -translate-y-1/2;
+		@apply absolute h-[126px] w-[126px] -translate-x-1/2 -translate-y-1/2  [left:calc(50%-10px)] [top:calc(50%-10px)];
 	}
 
 	.sping-logo_mid,
@@ -65,7 +65,7 @@
 			@apply h-[113px] w-[113px] lg:h-[146px] lg:w-[146px]  2xl:h-[193px] 2xl:w-[193px];
 		}
 		.spin-logo__image {
-			@apply absolute left-1/2 top-1/2 h-[84px] w-[78px] -translate-x-1/2 -translate-y-1/2  lg:h-[108px] lg:w-[100px]  2xl:h-[126px] 2xl:w-[126px];
+			@apply absolute h-[84px] w-[78px] -translate-x-1/2 -translate-y-1/2 [left:calc(50%-10px)] [top:calc(50%-10px)]   lg:h-[108px] lg:w-[100px]  2xl:h-[126px] 2xl:w-[126px];
 		}
 	}
 
@@ -75,7 +75,7 @@
 			@apply h-[91px] w-[91px] lg:h-[146px] lg:w-[146px]  2xl:h-[193px] 2xl:w-[193px];
 		}
 		.spin-logo__image {
-			@apply absolute left-1/2 top-1/2 h-[68px] w-[62px] -translate-x-1/2 -translate-y-1/2  lg:h-[108px] lg:w-[100px]  2xl:h-[126px] 2xl:w-[126px];
+			@apply absolute h-[68px] w-[62px] -translate-x-1/2 -translate-y-1/2 [top:calc(50%-8px)] [left:calc(50%-8px)] lg:h-[108px] lg:w-[100px]  lg:[left:calc(50%-10px)] lg:[top:calc(50%-10px)]  2xl:h-[126px] 2xl:w-[126px];
 		}
 	}
 
@@ -85,7 +85,15 @@
 			@apply h-[146px] w-[146px] lg:h-[146px] lg:w-[146px]  2xl:h-[193px] 2xl:w-[193px];
 		}
 		.spin-logo__image {
-			@apply absolute left-1/2 top-1/2 h-[108px] w-[100px] -translate-x-1/2 -translate-y-1/2  lg:h-[108px] lg:w-[100px]  2xl:h-[126px] 2xl:w-[126px];
+			@apply absolute h-[108px] w-[100px] -translate-x-1/2 -translate-y-1/2 [left:calc(50%-10px)] [top:calc(50%-10px)]  lg:h-[108px] lg:w-[100px]  2xl:h-[126px] 2xl:w-[126px];
 		}
+	}
+
+	.animate-marquee {
+		animation: marquee linear infinite;
+	}
+
+	.animate-rotate {
+		animation: rotate linear infinite;
 	}
 }
