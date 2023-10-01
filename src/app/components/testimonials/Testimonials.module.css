@@ -1,5 +1,5 @@
 .testimonials {
-	@apply bg-[#49588F];
+	@apply relative z-10 bg-[#49588F];
 }
 
 .container {
@@ -51,7 +51,7 @@
 }
 
 .cloud {
-	@apply pointer-events-none absolute -bottom-[100px]  -left-[54px] h-[184px] w-[360px] lg:-left-[38px]  2xl:-bottom-[70px] 2xl:-left-[166px] 2xl:z-10 2xl:h-[248px] 2xl:w-[487px];
+	@apply pointer-events-none absolute -bottom-[100px]  -left-[54px] h-[184px] w-[360px] lg:-left-[38px]  2xl:-bottom-[120px] 2xl:-left-[196px] 2xl:z-10 2xl:h-[248px] 2xl:w-[487px];
 	img {
 		@apply h-full w-full max-w-none;
 	}

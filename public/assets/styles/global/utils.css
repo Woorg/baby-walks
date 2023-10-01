@@ -1,3 +1,20 @@
+:root {
+	--btn-border: 1px solid rgba(255, 255, 255, 0.2);
+	--btn-bg: transparent;
+	--btn-shadow: 0px 0px 20px 0px #ce8c65;
+	--btn-text-color: #f4f4f4;
+
+	--shine-degree: 120deg;
+	--shine-color: rgba(255, 255, 255, 0.4);
+	--shine-effect: linear-gradient(
+		var(--shine-degree),
+		transparent 40%,
+		var(--shine-color),
+		transparent 50%
+	);
+	--shine-transition: all 0.65s ease-in-out;
+}
+
 .rouble {
 	font-family: $ff-rouble;
 	text-transform: lowercase;
@@ -6,7 +23,49 @@
 
 @layer components {
 	.btn {
-		@apply inline-flex  items-center justify-center rounded-[200px] rounded-full border border-[#FFCCAE] bg-gradient-button text-xs font-bold text-amber-700 transition-all  lg:text-sm 2xl:text-base;
+		@apply relative inline-flex cursor-pointer  items-center justify-center overflow-hidden rounded-[200px] rounded-full border border-[#FFCCAE] bg-gradient-button text-xs font-bold text-amber-700 transition-all  lg:text-sm 2xl:text-base;
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			background: var(--shine-effect);
+		}
+	}
+
+	.btn_anim {
+		&::before {
+			left: -100%;
+			transition: var(--shine-transition);
+		}
+		svg {
+			transform: translateX(0);
+			transition: var(--shine-transition);
+		}
+		&:hover {
+			box-shadow: var(--btn-shadow);
+
+			&::before {
+				left: 100%;
+			}
+			svg {
+				transform: translateX(5px);
+			}
+		}
+	}
+
+	.btn_anim_reverse {
+		&::before {
+			left: 100%;
+		}
+
+		&:hover {
+			&::before {
+				left: -100%;
+			}
+		}
 	}
 
 	.btn_big {
@@ -75,7 +134,7 @@
 			@apply h-[91px] w-[91px] lg:h-[146px] lg:w-[146px]  2xl:h-[193px] 2xl:w-[193px];
 		}
 		.spin-logo__image {
-			@apply absolute h-[68px] w-[62px] -translate-x-1/2 -translate-y-1/2 [top:calc(50%-8px)] [left:calc(50%-8px)] lg:h-[108px] lg:w-[100px]  lg:[left:calc(50%-10px)] lg:[top:calc(50%-10px)]  2xl:h-[126px] 2xl:w-[126px];
+			@apply absolute h-[68px] w-[62px] -translate-x-1/2 -translate-y-1/2 [left:calc(50%-8px)] [top:calc(50%-8px)] lg:h-[108px] lg:w-[100px]  lg:[left:calc(50%-10px)] lg:[top:calc(50%-10px)]  2xl:h-[126px] 2xl:w-[126px];
 		}
 	}
 
@@ -95,5 +154,25 @@
 
 	.animate-rotate {
 		animation: rotate linear infinite;
+	}
+
+	.animate-up-down-left-right {
+		animation: down-up-right-left linear infinite;
+	}
+
+	.animate-up-down-left-right-scale {
+		animation: down-up-right-left-scale linear infinite;
+	}
+
+	.animate-left-right-scale {
+		animation: left-right-scale linear infinite;
+	}
+
+	.animate-right-left-scale {
+		animation: right-left-scale linear infinite;
+	}
+
+	.animate-right-left {
+		animation: right-left linear infinite;
 	}
 }

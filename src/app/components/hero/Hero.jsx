@@ -103,7 +103,10 @@ const Hero = () => {
 						<Button
 							arrow={true}
 							href={data.basic.button.link}
-							className={cn(Styles.basicButton, 'btn btn_general btn_icon')}
+							className={cn(
+								Styles.basicButton,
+								'btn btn_general btn_anim btn_anim_reverse btn_icon',
+							)}
 						>
 							{data.basic.button.text}
 						</Button>
@@ -111,7 +114,9 @@ const Hero = () => {
 					</div>
 				</div>
 
-				<figure className={cn(Styles.cloudLeft)}>
+				<figure
+					className={cn(Styles.cloudLeft, 'animate-up-down-left-right [animation-duration:6s]')}
+				>
 					<Image
 						src={data.cloud.src}
 						alt={data.cloud.alt}
@@ -122,7 +127,12 @@ const Hero = () => {
 					/>
 				</figure>
 
-				<figure className={cn(Styles.cloudRight)}>
+				<figure
+					className={cn(
+						Styles.cloudRight,
+						'animate-up-down-left-right-scale [animation-duration:6s]',
+					)}
+				>
 					<Image
 						src={data.cloud.src}
 						alt={data.cloud.alt}

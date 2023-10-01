@@ -1,4 +1,4 @@
-import Cloud from '@images/general/cloud.webp';
+import CloudFlip from '@images/general/cloud-flip.webp';
 import Image from 'next/image';
 import Iframe from 'react-iframe';
 import { cn } from '../../lib/utils';
@@ -40,7 +40,7 @@ const Advantages = () => {
 			noteText: 'Нажимая отправить вы соглашаетесь с политикой конфиденциальности',
 		},
 		cloud: {
-			src: Cloud,
+			src: CloudFlip,
 			alt: 'cloud',
 		},
 	};
@@ -61,6 +61,7 @@ const Advantages = () => {
 
 				{/* <FormSignUp className={cn(Styles.form)} /> */}
 				<div
+					id="signin"
 					className={cn(
 						Styles.form,
 						'relative m-auto mt-10  aspect-square h-[600px] overflow-hidden',
@@ -71,14 +72,16 @@ const Advantages = () => {
 						width="100%"
 						height="100%"
 						id="4a9710aea2d130dd84f12a3c2c8c6169c09db9ee_797"
-						className={cn('absolute left-0 top-0 h-full w-full')}
+						className={cn('absolute left-0 top-0 z-10 h-full w-full')}
 						display="block"
-						loading
+						loading="lazy"
 						position="relative"
 					/>
 				</div>
 
-				<figure className={cn(Styles.cloudLeft)}>
+				<figure
+					className={cn(Styles.cloudLeft, 'animate-left-right-scale  [animation-duration:6s]')}
+				>
 					<Image
 						src={data.cloud.src}
 						alt={data.cloud.alt}

@@ -3,8 +3,8 @@
 import LogoImg from '@images/general/logo.webp';
 import { motion, MotionConfig, useReducedMotion } from 'framer-motion';
 import Image from 'next/image';
-import Link from 'next/link';
 import { useEffect, useId, useRef, useState } from 'react';
+import { Link } from 'react-scroll';
 import { cn } from '../../lib/utils';
 import Button from '../button/Button';
 import Container from '../container/Container';
@@ -62,7 +62,7 @@ const Header = () => {
 			link: 'https://t.me/BabyWalks',
 		},
 		contact: {
-			link: '/#join',
+			link: 'signin',
 			text: 'Присоединиться',
 		},
 		logo: {
@@ -129,19 +129,23 @@ const Header = () => {
 								<TelegramIcon className="h-[40px] w-[40px] lg:h-[50px] lg:w-[50px] xl:h-[52px] xl:w-[52px]" />
 							</Button>
 
-							<Button
-								href={data.contact.link}
+							<Link
+								to={data.contact.link}
+								smooth={true}
+								spy={true}
+								hashSpy={true}
+								offset={-72}
 								className={cn(
 									Styles.contact,
 									Styles.general,
-									'btn btn_big hidden  lg:inline-flex',
+									'btn btn_big btn_anim hidden  lg:inline-flex',
 									{
 										'btn_full -order-1 inline-flex h-[40px] justify-center ': expanded,
 									},
 								)}
 							>
 								{data.contact.text}
-							</Button>
+							</Link>
 
 							<button
 								ref={toggleRef}

@@ -1,7 +1,7 @@
 import Link from 'next/link';
-import Styles from './Button.module.css';
 import { cn } from '../../lib/utils';
 import ArrowRight from '../icons/ArrowRight';
+import Styles from './Button.module.css';
 
 const Button = ({ href, arrow = false, className, children, ...props }) => {
 	if (href) {

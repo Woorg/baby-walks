@@ -1,5 +1,5 @@
 .hero {
-	@apply relative overflow-hidden;
+	@apply relative;
 }
 .container {
 	@apply relative pb-10 pt-32 lg:pb-10 lg:pt-32  2xl:pb-32;
@@ -85,7 +85,7 @@
 }
 
 .basicButton {
-	@apply w-full justify-between lg:w-auto lg:max-w-[200px] lg:justify-center;
+	@apply w-full justify-between lg:w-auto lg:max-w-[220px] lg:justify-center;
 	grid-area: button;
 	@screen lg {
 		@apply col-span-1;
@@ -100,7 +100,7 @@
 }
 
 .cloudLeft {
-	@apply pointer-events-none absolute -left-[50px] bottom-[86px] h-[87px] w-[172px] lg:-bottom-20  lg:-left-[104px] lg:h-[182px] lg:w-[359px] 2xl:-left-[69px] 2xl:bottom-[20px] 2xl:h-[248px] 2xl:w-[487px];
+	@apply pointer-events-none absolute -left-[50px] bottom-[86px] h-[87px] w-[172px] lg:-bottom-20  lg:-left-[104px] lg:h-[248px] lg:w-[487px] 2xl:bottom-[20px] 2xl:left-[10px] 2xl:h-[248px] 2xl:w-[487px];
 	img {
 		@apply h-full w-full max-w-none;
 	}

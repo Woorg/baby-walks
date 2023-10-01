@@ -7,7 +7,7 @@
 }
 
 .logo {
-	@apply h-[48px] w-[46px] shrink-0 lg:h-[54px] lg:w-[52px] 2xl:h-[72px] 2xl:h-[74px];
+	@apply h-[48px] w-[46px] shrink-0 lg:h-[54px] lg:w-[52px] 2xl:h-[74px] 2xl:w-[72px];
 }
 
 .navigation {

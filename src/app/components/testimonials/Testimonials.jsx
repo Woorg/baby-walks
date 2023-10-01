@@ -152,7 +152,7 @@ const Testimonials = () => {
 					</Swiper>
 				</div>
 
-				<figure className={cn(Styles.cloud)}>
+				<figure className={cn(Styles.cloud, 'animate-right-left [animation-duration:6s]')}>
 					<Image
 						src={data.cloud.src}
 						alt={data.cloud.alt}

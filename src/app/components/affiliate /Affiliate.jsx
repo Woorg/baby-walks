@@ -53,7 +53,7 @@ const Affiliate = () => {
 						id="d4aaac5dffe78a4998fd07edcabe457990256bdf_311"
 						className={cn('absolute left-0 top-0 h-full w-full')}
 						display="block"
-						loading
+						loading="lazy"
 						position="relative"
 					/>
 				</div>

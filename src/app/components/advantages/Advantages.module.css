@@ -80,7 +80,7 @@
 }
 
 .cloudLeft {
-	@apply pointer-events-none absolute -bottom-[200px] hidden   h-[330px] w-[650px] -scale-x-[1] lg:-left-[420px] lg:block 2xl:-left-[260px];
+	@apply pointer-events-none absolute -bottom-[190px] hidden   h-[330px] w-[650px] lg:-left-[420px] lg:block 2xl:-left-[260px];
 	img {
 		@apply h-full w-full max-w-none;
 	}
