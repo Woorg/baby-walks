@@ -12,7 +12,7 @@ import Styles from './Hero.module.css';
 const Hero = () => {
 	const data = {
 		intro: {
-			title: 'Курс по уходу за ребёнком ребёнком от 0 до 12 месяцев',
+			title: 'Курс по уходу за ребёнком от 0 до 12 месяцев',
 			text: '<p>Обеспечьте своему малышу наилучший уход! Узнайте все тонкости воспитания новорождённого с помощью подробного руководства на первые 12 месяцев.</p>',
 			image: { src: IntroImg, alt: 'Intro image' },
 		},
@@ -146,6 +146,7 @@ const Hero = () => {
 
 			<figure className={cn(Styles.clouds, 'animate-marquee [animation-duration:64s]')}>
 				<Image
+					className={cn('')}
 					src={data.clouds.src}
 					alt={data.clouds.alt}
 					width={data.clouds.src.width}

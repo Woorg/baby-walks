@@ -96,11 +96,11 @@ const Header = () => {
 					</Logo>
 
 					<motion.div
-						// layout
-						// style={{ height: expanded ? 'auto' : '0' }}
+						layout
+						style={{ height: expanded ? 'auto' : '0' }}
 						ref={navRef}
-						className={cn(Styles.wrapper, 'before:hidden after:hidden', {
-							'fixed left-0 right-0 top-0 w-full flex-col justify-center overflow-hidden rounded-b-[20px] border border-white  p-5 transition-colors after:z-10 after:block after:bg-[rgba(6,23,85,.20)] after:backdrop-blur-[6px]':
+						className={cn(Styles.wrapper, '  before:hidden after:hidden', {
+							'fixed left-0 right-0 top-0 z-20 w-full flex-col justify-center overflow-hidden rounded-b-[20px] border border-white  p-5 transition-all after:z-10 after:block after:bg-[rgba(6,23,85,.20)] after:backdrop-blur-[6px]':
 								expanded,
 						})}
 					>
