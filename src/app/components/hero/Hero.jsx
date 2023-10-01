@@ -33,7 +33,7 @@ const Hero = () => {
 			},
 			text: '<p>Развитие ребёнка до года проходит довольно быстро. Нередко внешний вид малыша, его рефлексы, поведение внушают родителям тревогу. Чтобы не тревожиться понапрасну, узнайте об основных «контрольных точках» в развитии ребёнка в возрасте до годика. В ходе курса вы получите ценные сведения, практические рекомендации и научно обоснованные методы по обеспечению правильного становления вашего ребёнка</p>',
 			button: {
-				link: '',
+				link: 'pay-widget',
 				text: 'Присоединиться',
 			},
 		},
@@ -101,12 +101,16 @@ const Hero = () => {
 							dangerouslySetInnerHTML={basicText}
 						></div>
 						<Button
-							arrow={true}
+							smooth={true}
+							spy={true}
+							hashSpy={true}
+							offset={-72}
 							href={data.basic.button.link}
 							className={cn(
 								Styles.basicButton,
 								'btn btn_general btn_anim btn_anim_reverse btn_icon',
 							)}
+							arrow={true}
 						>
 							{data.basic.button.text}
 						</Button>

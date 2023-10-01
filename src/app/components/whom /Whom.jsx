@@ -40,7 +40,7 @@ const Whom = ({ children }) => {
 	// }
 
 	return (
-		<section className={cn(Styles.whom, '')}>
+		<section id="whom" className={cn(Styles.whom, '')}>
 			<Container className={cn(Styles.container)}>
 				<div className={cn(Styles.row)}>
 					<figure className={cn(Styles.image)}>
@@ -59,18 +59,19 @@ const Whom = ({ children }) => {
 						<h2 className={cn(Styles.title, 'title title_h2')}>{data.title}</h2>
 						<div className={cn(Styles.text, 'text text_big')}>{data.text}</div>
 
-						<div className={cn(Styles.widget, '')}>
+						<div id="pay-widget" className={cn(Styles.widget, '')}>
 							<span className={cn(Styles.widgetText, 'text text_big')}>Виджет оплаты</span>
 							<div className={cn(Styles.widgetScript)}>
-								{/* <Iframe
-									url="https://babywalks.getcourse.ru/pl/lite/widget/widget?id=1000431&amp;id=1000431&amp;ref=https%3A%2F%2Fbabywalks.getcourse.ru%2Fpl%2Flite%2Fwidget%2Feditor%3Fid%3D1000431&amp;loc=https%3A%2F%2Fbabywalks.getcourse.ru%2Fpl%2Flite%2Fwidget%2Fshow%3Fid%3D1000431"
+								<Iframe
+									url="https://babywalks.getcourse.ru/pl/lite/widget/widget?id=984345"
 									width="100%"
 									height="100%"
-									id="d4aaac5dffe78a4998fd07edcabe457990256bdf_311"
-									className=""
+									id="4a9710aea2d130dd84f12a3c2c8c6169c09db9ee_797"
+									className={cn('absolute left-0 top-0 z-10 h-full w-full')}
 									display="block"
+									loading="lazy"
 									position="relative"
-								/> */}
+								/>
 							</div>
 						</div>
 					</div>

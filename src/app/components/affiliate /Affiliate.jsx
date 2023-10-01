@@ -1,7 +1,7 @@
-import Iframe from 'react-iframe';
+// import Iframe from 'react-iframe';
 import { cn } from '../../lib/utils';
 import Container from '../container/Container';
-import { FormAffiliate } from '../form/Form';
+// import { FormAffiliate } from '../form/Form';
 import { SpinIcon } from '../icons/SpinIcon';
 import Styles from './Affiliate.module.css';
 
@@ -40,7 +40,7 @@ const Affiliate = () => {
 					</ul>
 				</div>
 
-				<div
+				{/* <div
 					className={cn(
 						Styles.form,
 						'relative m-auto mt-10  aspect-square h-[600px] overflow-hidden',
@@ -56,7 +56,7 @@ const Affiliate = () => {
 						loading="lazy"
 						position="relative"
 					/>
-				</div>
+				</div> */}
 
 				{/* <FormAffiliate className={cn(Styles.form, 'mt-10')} /> */}
 			</Container>

@@ -34,7 +34,7 @@
 }
 
 .widget {
-	@apply relative flex min-h-[437px] items-center justify-center bg-zinc-300;
+	@apply relative flex min-h-[557px] items-center justify-center bg-zinc-300;
 }
 
 .widgetText {

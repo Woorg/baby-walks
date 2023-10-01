@@ -1,9 +1,9 @@
 import CloudFlip from '@images/general/cloud-flip.webp';
 import Image from 'next/image';
-import Iframe from 'react-iframe';
+// import Iframe from 'react-iframe';
 import { cn } from '../../lib/utils';
 import Container from '../container/Container';
-import { FormSignUp } from '../form/Form';
+// import { FormSignUp } from '../form/Form';
 import Styles from './Advantages.module.css';
 
 const Advantages = () => {
@@ -60,7 +60,7 @@ const Advantages = () => {
 				</ul>
 
 				{/* <FormSignUp className={cn(Styles.form)} /> */}
-				<div
+				{/* <div
 					id="signin"
 					className={cn(
 						Styles.form,
@@ -77,7 +77,7 @@ const Advantages = () => {
 						loading="lazy"
 						position="relative"
 					/>
-				</div>
+				</div> */}
 
 				<figure
 					className={cn(Styles.cloudLeft, 'animate-left-right-scale  [animation-duration:6s]')}

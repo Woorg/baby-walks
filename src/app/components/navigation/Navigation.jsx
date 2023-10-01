@@ -45,7 +45,7 @@ const Navigation = ({ expanded, closeMenu, className, children }) => {
 						<Link
 							to={link.href}
 							onClick={closeMenu}
-							activeClass="active"
+							activeClass={cn(Styles.active)}
 							smooth={true}
 							spy={true}
 							hashSpy={true}
