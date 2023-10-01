@@ -23,9 +23,9 @@
 
 @keyframes rotate {
 	from {
-		transform: rotate(360deg);
+		transform: rotate(0deg);
 	}
 	to {
-		transform: rotate(0);
+		transform: rotate(360deg);
 	}
 }

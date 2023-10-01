@@ -63,14 +63,14 @@ const Whom = ({ children }) => {
 							<span className={cn(Styles.widgetText, 'text text_big')}>Виджет оплаты</span>
 							<div className={cn(Styles.widgetScript)}>
 								{/* <Iframe
-								url="https://testgorlov.getcourse.ru/pl/lite/widget/widget?id=1005765&amp;id=1005765&amp;ref=https%3A%2F%2Ftestgorlov.getcourse.ru%2Fpl%2Flite%2Fwidget%2Feditor%3Fid%3D1005765&amp;loc=https%3A%2F%2Ftestgorlov.getcourse.ru%2Fpl%2Flite%2Fwidget%2Fshow%3Fid%3D1005765"
-								width="100%"
-								height="100%"
-								id="08c44908d98c818ac6f41436f411cb3cfe8064f9_954"
-								className=""
-								display="block"
-								position="relative"
-							/> */}
+									url="https://babywalks.getcourse.ru/pl/lite/widget/widget?id=1000431&amp;id=1000431&amp;ref=https%3A%2F%2Fbabywalks.getcourse.ru%2Fpl%2Flite%2Fwidget%2Feditor%3Fid%3D1000431&amp;loc=https%3A%2F%2Fbabywalks.getcourse.ru%2Fpl%2Flite%2Fwidget%2Fshow%3Fid%3D1000431"
+									width="100%"
+									height="100%"
+									id="d4aaac5dffe78a4998fd07edcabe457990256bdf_311"
+									className=""
+									display="block"
+									position="relative"
+								/> */}
 							</div>
 						</div>
 					</div>

@@ -1,9 +1,10 @@
+import Cloud from '@images/general/cloud.webp';
 import Image from 'next/image';
+import Iframe from 'react-iframe';
 import { cn } from '../../lib/utils';
 import Container from '../container/Container';
 import { FormSignUp } from '../form/Form';
 import Styles from './Advantages.module.css';
-import Cloud from '@images/general/cloud.webp';
 
 const Advantages = () => {
 	const data = {
@@ -58,7 +59,25 @@ const Advantages = () => {
 					))}
 				</ul>
 
-				<FormSignUp className={cn(Styles.form)} />
+				{/* <FormSignUp className={cn(Styles.form)} /> */}
+				<div
+					className={cn(
+						Styles.form,
+						'relative m-auto mt-10  aspect-square h-[600px] overflow-hidden',
+					)}
+				>
+					<Iframe
+						url="https://babywalks.getcourse.ru/pl/lite/widget/widget?id=984345"
+						width="100%"
+						height="100%"
+						id="4a9710aea2d130dd84f12a3c2c8c6169c09db9ee_797"
+						className={cn('absolute left-0 top-0 h-full w-full')}
+						display="block"
+						loading
+						position="relative"
+					/>
+				</div>
+
 				<figure className={cn(Styles.cloudLeft)}>
 					<Image
 						src={data.cloud.src}

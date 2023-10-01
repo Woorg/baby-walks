@@ -3,7 +3,7 @@ import { cn } from '../../lib/utils';
 const ArrowRight = ({ className }) => {
 	return (
 		<svg
-			className={cn(className, 'btnArrow')}
+			className={cn(className, 'btnArrow shrink-0')}
 			xmlns="http://www.w3.org/2000/svg"
 			viewBox="0 0 36 25"
 			fill="none"

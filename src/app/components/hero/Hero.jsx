@@ -143,6 +143,14 @@ const Hero = () => {
 					blurDataURL={data.clouds.src.blurDataURL}
 					placeholder="blur"
 				/>
+				{/* <Image
+					src={data.clouds.src}
+					alt={data.clouds.alt}
+					width={data.clouds.src.width}
+					height={data.clouds.src.height}
+					blurDataURL={data.clouds.src.blurDataURL}
+					placeholder="blur"
+				/> */}
 			</figure>
 		</section>
 	);

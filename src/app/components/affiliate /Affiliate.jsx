@@ -1,3 +1,4 @@
+import Iframe from 'react-iframe';
 import { cn } from '../../lib/utils';
 import Container from '../container/Container';
 import { FormAffiliate } from '../form/Form';
@@ -38,7 +39,26 @@ const Affiliate = () => {
 						))}
 					</ul>
 				</div>
-				<FormAffiliate className={cn(Styles.form, 'mt-10')} />
+
+				<div
+					className={cn(
+						Styles.form,
+						'relative m-auto mt-10  aspect-square h-[600px] overflow-hidden',
+					)}
+				>
+					<Iframe
+						url="https://babywalks.getcourse.ru/pl/lite/widget/widget?id=1000431"
+						width="100%"
+						height="100%"
+						id="d4aaac5dffe78a4998fd07edcabe457990256bdf_311"
+						className={cn('absolute left-0 top-0 h-full w-full')}
+						display="block"
+						loading
+						position="relative"
+					/>
+				</div>
+
+				{/* <FormAffiliate className={cn(Styles.form, 'mt-10')} /> */}
 			</Container>
 		</section>
 	);
