@@ -55,6 +55,7 @@ const Affiliate = () => {
 						display="block"
 						loading="lazy"
 						position="relative"
+						scrolling="no"
 					/>
 				</div>
 

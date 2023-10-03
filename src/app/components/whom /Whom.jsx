@@ -71,6 +71,7 @@ const Whom = ({ children }) => {
 									display="block"
 									loading="lazy"
 									position="relative"
+									scrolling="no"
 								/>
 							</div>
 						</div>
