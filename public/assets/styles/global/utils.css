@@ -68,6 +68,11 @@
 		}
 	}
 
+	.btn_no_anim {
+		&:hover {
+			@apply shadow-none;
+		}
+	}
 	.btn_big {
 		@apply h-[52px] px-5 py-2.5 2xl:px-[30px];
 	}

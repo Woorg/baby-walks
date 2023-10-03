@@ -105,7 +105,7 @@ const Hero = () => {
 							spy={true}
 							hashSpy={true}
 							offset={-72}
-							href={data.basic.button.link}
+							to={data.basic.button.link}
 							className={cn(
 								Styles.basicButton,
 								'btn btn_general btn_anim btn_anim_reverse btn_icon',

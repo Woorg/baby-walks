@@ -13,7 +13,7 @@
 		}
 	}
 	&:last-child {
-		@apply w-full lg:w-auto;
+		/* @apply w-full lg:w-auto; */
 
 		.link {
 			/* @apply lg:pr-0 xl:pr-5; */

@@ -10,7 +10,7 @@ import Button from '../button/Button';
 import Container from '../container/Container';
 import CloseIcon from '../icons/CloseIcon';
 import MenuIcon from '../icons/MenuIcon';
-import TelegramIcon from '../icons/TelegramIcon';
+import { TelegramIcon } from '../icons/TelegramIcon';
 import Logo from '../logo/Logo';
 import Navigation from '../navigation/Navigation';
 import Styles from './Header.module.css';
