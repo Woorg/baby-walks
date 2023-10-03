@@ -22,7 +22,7 @@
 }
 
 .spin {
-	@apply absolute right-0 top-0 lg:right-1 lg:top-0 2xl:-top-[58px];
+	@apply absolute right-0 top-0  hidden lg:right-1 lg:top-0 2xl:-top-[58px];
 }
 
 .title {
@@ -34,7 +34,7 @@
 }
 
 .widget {
-	@apply relative flex min-h-[557px] items-center justify-center bg-zinc-300;
+	@apply relative flex min-h-[557px] items-center justify-center overflow-hidden bg-zinc-300;
 }
 
 .widgetText {
@@ -42,7 +42,7 @@
 }
 
 .widgetScript {
-	@apply absolute left-0 top-0 h-full w-full;
+	@apply absolute left-0 top-0 aspect-auto h-full w-full;
 }
 
 .cloud {

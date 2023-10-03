@@ -1,4 +1,4 @@
-// import Iframe from 'react-iframe';
+import Iframe from 'react-iframe';
 import { cn } from '../../lib/utils';
 import Container from '../container/Container';
 // import { FormAffiliate } from '../form/Form';
@@ -40,10 +40,10 @@ const Affiliate = () => {
 					</ul>
 				</div>
 
-				{/* <div
+				<div
 					className={cn(
 						Styles.form,
-						'relative m-auto mt-10  aspect-square h-[600px] overflow-hidden',
+						'relative m-auto mt-10  aspect-auto h-[600px] overflow-hidden',
 					)}
 				>
 					<Iframe
@@ -51,12 +51,12 @@ const Affiliate = () => {
 						width="100%"
 						height="100%"
 						id="d4aaac5dffe78a4998fd07edcabe457990256bdf_311"
-						className={cn('absolute left-0 top-0 h-full w-full')}
+						className={cn('absolute left-0 top-0 h-full w-full ')}
 						display="block"
 						loading="lazy"
 						position="relative"
 					/>
-				</div> */}
+				</div>
 
 				{/* <FormAffiliate className={cn(Styles.form, 'mt-10')} /> */}
 			</Container>
