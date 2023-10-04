@@ -7,13 +7,13 @@
 }
 
 .logo {
-	@apply order-1 h-[48px] w-[46px] shrink-0 lg:order-1 lg:h-[54px] lg:w-[52px] 2xl:h-[74px] 2xl:w-[72px];
+	@apply h-[48px] w-[46px] shrink-0  lg:h-[54px] lg:w-[52px] 2xl:h-[74px] 2xl:w-[72px];
 }
 
-.navigation {
+/* .navigation {
 	@apply order-3 w-full lg:order-2 lg:w-auto;
-}
+} */
 
 .contact {
-	@apply order-2 ml-auto inline-flex items-center gap-[10px] text-sm font-bold lg:order-3 2xl:text-base;
+	@apply ml-auto inline-flex items-center gap-[10px] text-sm font-bold  2xl:text-base;
 }

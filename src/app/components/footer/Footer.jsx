@@ -34,7 +34,7 @@ const Footer = () => {
 						// placeholder="blur"
 					/>
 				</Logo>
-				<Navigation className={cn(Styles.navigation, '')} />
+				{/* <Navigation className={cn(Styles.navigation, '')} /> */}
 
 				<Button href={data.telegram.link} className={cn(Styles.contact, 'hover:shadow-none')}>
 					Поддержка
