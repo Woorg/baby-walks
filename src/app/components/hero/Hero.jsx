@@ -94,6 +94,7 @@ const Hero = () => {
 								blurDataURL={data.basic.babyImg.src.blurDataURL}
 								placeholder="blur"
 								priority
+								loading="eager"
 							/>
 						</figure>
 						{/* <div className={cn(Styles.basicEntry)}> */}
