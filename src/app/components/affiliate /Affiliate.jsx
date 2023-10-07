@@ -47,6 +47,7 @@ const Affiliate = () => {
 					)}
 				>
 					<Iframe
+						title="Партнёрская программа форма"
 						url="https://babywalks.getcourse.ru/pl/lite/widget/widget?id=1000431"
 						width="100%"
 						height="100%"

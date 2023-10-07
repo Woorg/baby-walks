@@ -73,6 +73,8 @@ const Hero = () => {
 							height={data.intro.image.src.height}
 							blurDataURL={data.intro.image.src.blurDataURL}
 							placeholder="blur"
+							priority
+							loading="eager"
 						/>
 					</figure>
 				</div>
