@@ -73,6 +73,8 @@ const Hero = () => {
 							height={data.intro.image.src.height}
 							blurDataURL={data.intro.image.src.blurDataURL}
 							placeholder="blur"
+							priority
+							loading="eager"
 						/>
 					</figure>
 				</div>
@@ -93,8 +95,6 @@ const Hero = () => {
 								height={data.basic.babyImg.src.height}
 								blurDataURL={data.basic.babyImg.src.blurDataURL}
 								placeholder="blur"
-								priority
-								loading="eager"
 							/>
 						</figure>
 						{/* <div className={cn(Styles.basicEntry)}> */}
