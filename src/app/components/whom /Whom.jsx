@@ -63,6 +63,7 @@ const Whom = ({ children }) => {
 							<span className={cn(Styles.widgetText, 'text text_big')}>Виджет оплаты</span>
 							<div className={cn(Styles.widgetScript)}>
 								<Iframe
+									title="Виджет оплаты"
 									url="https://babywalks.getcourse.ru/pl/lite/widget/widget?id=984345"
 									width="100%"
 									height="100%"
