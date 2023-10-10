@@ -34,6 +34,7 @@ export const metadata = {
 export default function Layout({ children }) {
 	return (
 		<html lang="ru">
+			<meta name="mailru-domain" content="hcM8dAXc5NeZiqcA" />
 			<body
 				id="top"
 				className={cn(
