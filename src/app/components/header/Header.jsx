@@ -59,7 +59,7 @@ const Header = () => {
 
 	const data = {
 		telegram: {
-			link: 'https://t.me/BabyWalks',
+			link: 'https://t.me/babywalks9',
 		},
 		contact: {
 			link: 'pay-widget',
@@ -126,14 +126,14 @@ const Header = () => {
 								'mt-10 max-w-full ': expanded,
 							})}
 						>
-							{/* <Button
+							<Button
 								href={data.telegram.link}
-								className={cn(Styles.contact, 'hidden lg:hidden', {
+								className={cn(Styles.contact, '', {
 									'inline-flex hidden': expanded,
 								})}
 							>
 								<TelegramIcon className="h-[40px] w-[40px] lg:h-[50px] lg:w-[50px] xl:h-[52px] xl:w-[52px]" />
-							</Button> */}
+							</Button>
 
 							<Link
 								to={data.contact.link}
@@ -144,7 +144,7 @@ const Header = () => {
 								className={cn(
 									Styles.contact,
 									Styles.general,
-									'btn btn_big btn_anim hidden  lg:inline-flex',
+									'btn btn_big btn_anim lg:inline-flex',
 									{
 										'btn_full -order-1 inline-flex h-[40px] justify-center ': expanded,
 									},

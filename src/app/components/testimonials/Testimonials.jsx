@@ -1,5 +1,6 @@
 'use client';
 
+import Fancybox from '@components/fancybox/Fancybox';
 import Img1 from '@images/content/testimonials/testimImg-1.webp';
 import Img2 from '@images/content/testimonials/testimImg-2.webp';
 import Img3 from '@images/content/testimonials/testimImg-3.webp';
@@ -11,6 +12,7 @@ import Img8 from '@images/content/testimonials/testimImg-8.webp';
 import Img9 from '@images/content/testimonials/testimImg-9.webp';
 import Img10 from '@images/content/testimonials/testimImg-10.webp';
 import Image from 'next/image';
+import Link from 'next/link';
 import { Navigation } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { cn } from '../../lib/utils';
@@ -91,6 +93,8 @@ const Testimonials = () => {
 		},
 	};
 
+	console.log(data.slider[0].image.src.src);
+
 	return (
 		<section id="testimonials" className={cn(Styles.testimonials)}>
 			<Container className={cn(Styles.container)}>
@@ -105,13 +109,6 @@ const Testimonials = () => {
 							0: {
 								slidesPerView: 'auto',
 							},
-
-							// 1024: {
-							// 	slidesPerView: 1.3,
-							// },
-							// 1280: {
-							// 	slidesPerView: 1.6,
-							// },
 						}}
 						navigation={{
 							prevEl: '.slider-button_prev',
@@ -134,19 +131,31 @@ const Testimonials = () => {
 						</div>
 
 						{data.slider.map((slide, key) => (
-							<SwiperSlide key={`__${key}__`} className={cn(Styles.sliderSlide, 'px-2 lg:px-2')}>
-								<figure className={cn(Styles.sliderImage, '')}>
-									<Image
-										className={cn(Styles.image, 'block')}
-										src={slide.image.src}
-										alt={slide.image.alt}
-										width={slide.image.src.width}
-										height={slide.image.src.height}
-										priority
-										// blurDataURL={slide.image.src.blurDataURL}
-										// placeholder="blur"
-									/>
-								</figure>
+							<SwiperSlide
+								key={`__${key}__`}
+								data-caption={slide.image.alt}
+								className={cn(Styles.sliderSlide, 'px-2 lg:px-2')}
+							>
+								<Fancybox
+									options={{
+										Carousel: {
+											infinite: false,
+										},
+									}}
+								>
+									<Link href={slide.image.src.src} data-fancybox="gallery">
+										<figure className={cn(Styles.sliderImage, '')}>
+											<Image
+												className={cn(Styles.image, 'block')}
+												src={slide.image.src}
+												alt={slide.image.alt}
+												width={slide.image.src.width}
+												height={slide.image.src.height}
+												priority
+											/>
+										</figure>
+									</Link>
+								</Fancybox>
 							</SwiperSlide>
 						))}
 					</Swiper>

@@ -74,7 +74,7 @@
 		}
 	}
 	.btn_big {
-		@apply h-[52px] px-5 py-2.5 2xl:px-[30px];
+		@apply h-[40px] px-5 py-2.5 lg:h-[52px] 2xl:px-[30px];
 	}
 
 	.btn_general {
