@@ -48,7 +48,7 @@ const Hero = () => {
 	};
 
 	return (
-		<section className={cn(Styles.hero)}>
+		<section id="top" className={cn(Styles.hero)}>
 			<Container className={cn(Styles.container, '')}>
 				<figure className={cn(Styles.cloudTop)}>
 					<Image

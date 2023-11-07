@@ -143,7 +143,11 @@ const Testimonials = () => {
 										},
 									}}
 								>
-									<Link href={slide.image.src.src} data-fancybox="gallery">
+									<Link
+										href={slide.image.src.src}
+										data-fancybox="gallery"
+										className={cn('focus-within:outline-none hover:outline-none')}
+									>
 										<figure className={cn(Styles.sliderImage, '')}>
 											<Image
 												className={cn(Styles.image, 'block')}

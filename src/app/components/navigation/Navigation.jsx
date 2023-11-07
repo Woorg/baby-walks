@@ -48,7 +48,7 @@ const Navigation = ({ expanded, closeMenu, className, children }) => {
 							activeClass={cn(Styles.active)}
 							smooth={true}
 							spy={true}
-							// hashSpy={true}
+							hashSpy={true}
 							offset={-92}
 							className={cn(Styles.link, 'text-blue-950', {
 								'w-full justify-center text-[#F3EFEB]': expanded,
