@@ -13,7 +13,7 @@ import Styles from './Footer.module.css';
 const Footer = () => {
 	const data = {
 		telegram: {
-			link: 'https://t.me/babywalks9',
+			link: 'https://t.me/BabyWalks',
 		},
 		logo: {
 			src: LogoImg,
