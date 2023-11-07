@@ -149,8 +149,8 @@ const Testimonials = () => {
 												className={cn(Styles.image, 'block')}
 												src={slide.image.src}
 												alt={slide.image.alt}
-												width={slide.image.src.width}
-												height={slide.image.src.height}
+												width={slide.image.src.width / 3}
+												height={slide.image.src.height / 3}
 												priority
 											/>
 										</figure>
